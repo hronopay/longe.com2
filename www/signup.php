@@ -1,0 +1,74 @@
+<?php  
+include_once('include/ip.php');  
+include("include/header.php"); 
+include_once("config.php");
+include_once("engine.php");
+open_connection();
+?>
+
+<div class="general">
+
+<h3>Create an Account</h3>
+
+<form id="form2" name="regclient"  action="registration.php" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
+
+	<div align="left">
+		Personal account type <span class="comment">- Trade as an individual </span><br>
+		Corporate account type<span class="comment">- Trade on behalf of your business </span>
+	</div>
+
+	<div align="left">
+		<strong>E-mail address</strong><br>
+		<input maxlength="45"  size="14" type="text" name="mail">
+	</div>
+
+	<div align="left">
+		<strong>Password </strong><span class="comment">(must be a Strong password at least 12 characters long):</span><br>
+		<input size="14" type="text" name="phone" maxlength="20">
+	</div>
+		
+
+	<div class="invisible">
+		<input value="<?php echo $ti = round (time()/3, 0); ?>" disabled>
+	</div>
+		
+	<div class="invisible">
+		<strong>Current time:</strong><br>
+		<?php echo $filledin = date("20y-m-d");  echo ' '; echo $filledin_hm = date("H:i:s"); ?>
+	</div>
+
+    <div align="left" class="invisible"></div>
+    <div align="left" class="invisible"></div>
+
+	<input name="id" type="hidden" value="<?php echo $ti; ?>">
+	<input name="filledin" type="hidden" value="<?php echo $filledin; ?>">
+	<input name="filledin_hm" type="hidden" value="<?php echo $filledin_hm; ?>">
+
+	<input class="CreateAcc" type="submit" name="doreg" value="Create Account" align="left">
+</form>
+
+	<div id="signUpWarning" align="left">
+	<span class="comment">Already have an account?</span> 
+	<a href="login" >Log in</a>
+<br>
+<br>
+     
+	 <span class="comment">We are committed to complying with all applicable regulations that help prevent, detect and remediate unlawful behavior by customers and virtual asset developers when using the BuySell Project trading platform or any other BuySell Project services.</span>
+	</div>
+
+</div> 
+	                                      
+<script language="javascript">
+<!--
+	var data = new Date;
+	document.getElementById('id_num').value = data.getTime().toString().substr(7);
+-->
+</script>
+
+                                       
+									 
+
+<?php 
+	close_connection();
+	include('include/footer.php'); 
+?>

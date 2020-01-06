@@ -1,0 +1,671 @@
+/*1c9d41*/
+body,td,th {
+	font-family: Verdana;
+	font-size: 12px;
+/*	color: #626262;*/
+	color: #eeeeee;
+}
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color:#0d2a59
+	
+}
+
+input {
+background:transparent url(../images/but-0.gif) repeat-x 1px 0;
+text-decoration:none;
+-moz-outline:0 none;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px;
+outline:0 none;
+cursor:pointer;
+/*quotes:"«" "»";*/
+}
+input[type="text"] {
+background:transparent url(../images/bat-input-text.gif) repeat-x 1px 0;
+cursor:text;
+}
+input[type="text"]:focus {
+color:#000099;
+font-size:13px;
+text-decoration:none;
+-moz-outline:0 none;
+-moz-border-radius: 0px; 
+-webkit-border-radius: 0px;
+}
+
+table {
+	border: 0px;
+}
+table td {
+	padding: 0px;
+}
+
+
+img {border: 0;}
+a {
+	color: #23b14d;
+	text-decoration: none;
+}
+a:link {
+	color: #23b14d;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+table td{
+padding:0px;
+}
+
+.catlink, .catlink a, .catlink a:link, .catlink a:active{
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: Verdana, Tahoma;
+	text-align:center;
+}
+
+.bbcodes {
+	border: 1px solid #B5B8C8;
+	color: #666666;
+	font-family: Verdana, Tahoma;
+	padding: 2px;
+	vertical-align: middle;
+	font-size: 11px; 
+	vertical-align: middle;
+	margin:2px;
+	-moz-outline:0 none;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+}
+.bbenter {
+	background: #FFF;
+	border: 1px solid #cccccc;
+	color: #666666;
+	font-family: Verdana, Tahoma;
+	padding: 0 2px;
+	vertical-align: middle;
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+	height: 14px;
+}
+.news {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #626262;
+}
+
+.menu a,
+.menu a:link,
+.menu a:visited,
+.menu a:hover,
+.menu a:active
+{
+	color:#fff;
+	text-decoration:none;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+
+
+
+/*********************************
+Global styling
+*********************************/
+#nav .item_expand {
+        background-position: right;
+        background-repeat: no-repeat;
+text-align: left;
+}
+
+#nav a {
+	display: block;
+	width: auto;
+	color:#fff;
+	text-decoration:none;
+	font-family:Verdana;
+	font-size:12px;
+        margin:0;
+        background:transparent;
+
+}
+
+#nav, #nav ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	float:left;
+}
+
+#nav li {  
+	float: left;
+	width: 230px;
+      margin-left:5px;
+	border-bottom: 1px dotted #5a5d66;
+	text-align: left;
+}
+
+#nav li ul { /* all menus */
+        width: 250px;
+	position: absolute;
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+}
+
+#nav li ul ul { /* margin for level 2 and higher menus */
+	margin: -23px 0 0 230px;
+}
+
+#nav li:hover ul ul, #nav li.sfhover ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+/*********************************
+Local styling overrides for specific menu levels
+*********************************/
+#nav li.endbevel {
+        background-position: 0 -22px;
+        background-repeat: repeat;
+        float:left;
+        display:block;
+        height:22px;
+        width:auto;
+        margin:0;
+        border:0;
+}
+
+#nav li.gr_menubutton {  
+        width:auto;
+        margin:0;
+        border:0;
+}
+
+#nav .gr_menubutton a {
+
+        margin-left:-1px;
+	padding:5px 10px 6px 10px;
+}
+
+#nav .gr_menubutton:hover, #nav .gr_menubutton.sfhover {
+        background-position: 0 -25px;
+        background-repeat: repeat-x;
+}
+
+#nav .menu_level1 a { /*removes the divider bevel image of the menubar buttons from the rest of the links. Affects every menu level*/
+        background:transparent;
+        padding-left:5px;
+}
+
+#nav .menu_level1 {
+        padding: 10px 0;
+	border-left: 1px solid #0e0f13;
+	border-right: 1px solid #0e0f13;
+	border-bottom: 1px solid #0e0f13;
+	margin-left: -1px;
+	background: #016946;
+        z-index:999;
+}
+
+#nav .menu_level2 {
+        padding-bottom:10px;
+	border-top: 1px solid #28292c;
+	border-right: 1px solid #28292c;
+	border-bottom: 1px solid #28292c;
+	background: #016946;
+        z-index:999;
+}
+
+#nav .menu_level1 li:hover, #nav .menu_level1 li.sfhover {
+	background: #016946;
+}
+
+#nav .menu_level2 li:hover, #nav .menu_level2 li.sfhover {
+	background: #016946;	
+}
+
+
+.shop1 {
+	display:none;
+}
+/*****************************************************************************************/
+/* For printview */
+.printview body{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+}
+.printview font{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+}
+.printview nobr{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+}
+.printview div{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+}
+.printview h1{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         16px;
+    font-weight:       bold;
+    color:             #000000;
+}
+.printview{
+    border-width:      1px;
+    border-color:      #B5B8C8;
+    border-style:      solid;
+    border-collapse:   collapse;
+    border-spacing:    0;
+}
+.printview th{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #000000;
+    background-color:  #e5ecf9;
+background:transparent url(../images/but-0.gif) repeat-x 1px 0;
+    border-width:      1px;
+    border-color:      #B5B8C8;
+    border-style:      solid;
+    padding:           2px;
+}
+.printview th[title]{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #000000;
+    background-color:  #e5ecf9;
+background:transparent url(../images/bat-input-text.gif) repeat-x 1px 0;
+    border-width:      1px;
+    border-color:      #B5B8C8;
+    border-style:      solid;
+    padding:           2px 8px 2px 8px;
+}
+.printview a:hover{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #0000ff;
+    /*background-color:  #e5ecf9;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           2px;*/
+}
+.printview a{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #0000aa;
+    /*background-color:  #e5ecf9;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           2px;*/
+}
+.printview td{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+    border-width:      1px;
+    border-color:      #B5B8C8;
+    border-style:      solid;
+    padding:           2px;
+}
+
+#buttonaddestce {
+	color:#000099; 
+	background-color:#FFFFFF; 
+	border:1px solid #ffffff;
+}
+/*****************************************************************************************/
+
+/* For buttonprintview */
+.buttonprintview body{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+}
+.buttonprintview font{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+}
+.buttonprintview nobr{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+}
+.buttonprintview div{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+}
+.buttonprintview h1{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         16px;
+    font-weight:       bold;
+    color:             #000000;
+}
+.buttonprintview{
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    border-collapse:   collapse;
+    border-spacing:    0;
+}
+.buttonprintview th{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #000000;
+    background-color:  #e5ecf9;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           2px;
+}
+.buttonprintview a:hover{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #0000ff;
+    /*background-color:  #e5ecf9;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           2px;*/
+}
+.buttonprintview a{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    font-weight:       bold;
+    color:             #0000aa;
+    /*background-color:  #e5ecf9;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           2px;*/
+}
+.buttonprintview td{
+    font-family:       Verdana, Arial, Hevetica, sans-serif;
+    font-size:         10px;
+    color:             #000000;
+    background-color:  #ffffff;
+    border-width:      1px;
+    border-color:      #aaaaaa;
+    border-style:      solid;
+    padding:           0;
+}
+
+#buttonaddestce {
+	color:#ffffff; 
+	background-color:#e5ecf9; 
+	border:1px solid #e5ecf9;
+}
+/*****************************************************************************************/
+
+
+
+/*calendar*/
+.ds_box {
+	background-color: #FFF;
+	border: 1px solid #B5B8C8;
+	position: absolute;
+	z-index: 32767;
+}
+.ds_tbl {
+	background-color: #FFF;
+}
+.ds_head {
+	background-color: #CED9E7;
+	color: #15428B;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.ds_subhead {
+	background-color: #CED9E7;
+	color: #007;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+/*	width: 32px;*/
+}
+.ds_cell {
+	background-color: #F0F3F3;
+	color: #15428B;
+	font-size: 13px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1px;
+	cursor: pointer;
+}
+.ds_cell:hover {
+	background-color: #F3F3F3;
+	color: #ff0000;
+} /* This hover code won't work for IE */
+
+
+
+
+.mybut2{
+text-decoration:none;
+background-color:#FFFFFF;
+border:1px solid #FFFFFF;
+font-size:9px;
+height:4px;
+-moz-outline:0 none;
+border-radius: 4px;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px;
+outline:0 none;
+cursor:pointer;
+}
+.mybut2:hover{
+background:transparent url(../images/but-0v1.gif) repeat-x 1px 0;
+height:20px;
+border: 1px solid #B5B8C8;
+}
+
+
+
+
+
+
+
+.mybut1{
+background:white  url(../images/but-0.gif) repeat-x 1px 0;
+text-decoration:none;
+-moz-outline:0 none;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px;
+outline:0 none;
+cursor:pointer;
+}
+.mybut1:hover{
+background:transparent  url(../images/but-0v1.gif) repeat-x 1px 0;
+}
+
+.red.mybut1, .red.mybut1:visited		{ background:transparent url(../images/but-red.gif) repeat-x 1px 0; }
+.red.mybut1:hover						{ background:transparent url(../images/but-0v1.gif) repeat-x 1px 0;  }
+.yellow.mybut1, .yellow.mybut1:visited		{ background:transparent url(../images/bat-yel.gif) repeat-x 1px 0; }
+.yellow.mybut1:hover						{ background:transparent url(../images/but-0v1.gif) repeat-x 1px 0; }
+
+
+
+
+
+
+
+
+
+
+
+			
+.awesome, .awesome:visited {
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+	.awesome:hover							{ background-color: #111; color: #fff; }
+	.awesome:active							{ top: 1px; }
+	.small.awesome, .small.awesome:visited 			{ font-size: 10px; padding: 1px ; }
+	.awesome, .awesome:visited,
+	.medium.awesome, .medium.awesome:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+	.large.awesome, .large.awesome:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
+	
+	.green.awesome, .green.awesome:visited		{ background-color: #91bd09; }
+	.green.awesome:hover						{ background-color: #749a02; }
+	.blue.awesome, .blue.awesome:visited		{ background-color: #2daebf; }
+	.blue.awesome:hover							{ background-color: #007d9a; }
+	.red.awesome, .red.awesome:visited			{ background-color: #e33100; }
+	.red.awesome:hover							{ background-color: #872300; }
+	.magenta.awesome, .magenta.awesome:visited		{ background-color: #a9014b; }
+	.magenta.awesome:hover							{ background-color: #630030; }
+	.orange.awesome, .orange.awesome:visited		{ background-color: #ff5c00; }
+	.orange.awesome:hover							{ background-color: #d45500; }
+	.yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
+	.yellow.awesome:hover							{ background-color: #fc9200; }
+	.white.awesome, .white.awesome:visited		{ background-color: #ffffff; color: #444; }
+	.white.awesome:hover							{ background-color: #eeeeee; color: #444;}
+
+
+
+
+
+
+
+
+
+			
+.foolsome, .foolsome:visited {
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	text-shadow: 0 -10px 10px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+	.foolsome:hover							{ background-color: #111; color: #fff; }
+	.foolsome:active							{ top: 1px; }
+	.small.foolsome, .small.foolsome:visited 			{ font-size: 10px; padding: 1px ; }
+	.foolsome, .foolsome:visited,
+	.medium.foolsome, .medium.foolsome:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+	.large.foolsome, .large.foolsome:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
+	
+	.green.foolsome, .green.foolsome:visited		{ background-color: #91bd09; }
+	.green.foolsome:hover						{ background-color: #749a02; }
+	.blue.foolsome, .blue.foolsome:visited		{ background-color: #2daebf; }
+	.blue.foolsome:hover							{ background-color: #007d9a; }
+	.red.foolsome, .red.foolsome:visited			{ background-color: #e33100; }
+	.red.foolsome:hover							{ background-color: #872300; }
+	.magenta.foolsome, .magenta.foolsome:visited		{ background-color: #a9014b; }
+	.magenta.foolsome:hover							{ background-color: #630030; }
+	.orange.foolsome, .orange.foolsome:visited		{ background-color: #ff5c00; }
+	.orange.foolsome:hover							{ background-color: #d45500; }
+	.yellow.foolsome, .yellow.foolsome:visited		{ background-color: #ffb515; }
+	.yellow.foolsome:hover							{ background-color: #fc9200; }
+	.white.foolsome, .white.foolsome:visited		{ background-color: #ffffff; color: #444; }
+	.white.foolsome:hover							{ background-color: #eeeeee; color: #444;}
+
+
+
+
+
+.calendar {
+	background:#ffffff; 
+	border-top:1px; 
+	border-left:1px; 
+	border-right:1px; 
+	border-bottom:1px; 
+	border-style:dotted; 
+	border-color:#000000; 
+	padding:6px;
+}
+.calendar,.cal_table,.cal_month_link,.cal_year_link,.cal_tr_hdr,.cal_td_hdr,
+.cal_tr_dweek,.cal_td_dweek	{
+	font-family:Arial; 
+	font-size:14px;
+}
+.cal_td_dweek {
+	font-weight:bold; 
+	color:#999999; 
+}
+.cal_month_link,A:link.cal_month_link,A:visited.cal_month_link,A:hover.cal_month_link,
+.cal_year_link,A:link.cal_year_link,A:visited.cal_year_link,A:hover.cal_year_link	{
+	color:#999999; 
+	text-decoration:none; 
+	padding-left:2px; 
+	padding-right:2px; 
+}
+.cal_today {
+	background:#f0f0f0; 
+	border-top:1px; 
+	border-left:1px; 
+	border-right:1px; 
+	border-bottom:1px; 
+	border-style:solid; 
+	border-color:#999999;
+}
+.cal_select {
+	background:#fff0f0; 
+	border-top:1px; 
+	border-left:1px; 
+	border-right:1px; 
+	border-bottom:1px; 
+	border-style:solid; 
+	border-color:#ff0000;
+}
+.cal_day,A:link.cal_day,A:visited.cal_day,A:hover.cal_day	{
+	color:#000000; 
+	text-decoration:none; 
+	font-weight:bold;
+}
+.cal_none {
+	color:#666666; 
+	text-decoration:none;
+}
+

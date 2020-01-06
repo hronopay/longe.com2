@@ -1,0 +1,194 @@
+@charset "UTF-8";
+.instruments--3YLoBEnHLDvO1oHQkgw140 {
+  width: 100%;
+  min-height: 403px; }
+  @media (min-width: 768px) {
+    .instruments--3YLoBEnHLDvO1oHQkgw140 {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
+  @media (min-width: 1024px) {
+    .instruments--3YLoBEnHLDvO1oHQkgw140 {
+      width: 45%; } }
+  @media (min-width: 1600px) {
+    .instruments--3YLoBEnHLDvO1oHQkgw140 {
+      width: 35%; } }
+
+.high_chart_block--1uVpfin0FQ4EscayOcYnbL {
+  width: 100%; }
+
+.trading_and_market--1YWu2x_k18NPVwpmEQ5GLZ {
+  width: 100%;
+  min-height: 403px; }
+  @media (min-width: 768px) {
+    .trading_and_market--1YWu2x_k18NPVwpmEQ5GLZ {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    .trading_and_market--1YWu2x_k18NPVwpmEQ5GLZ {
+      width: 55%; } }
+  @media (min-width: 1600px) {
+    .trading_and_market--1YWu2x_k18NPVwpmEQ5GLZ {
+      width: 65%; } }
+
+.order_book--wy_QP3QKove9La_15bmEK {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .order_book--wy_QP3QKove9La_15bmEK .scrolling_table_container::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 72px; }
+    [dir] .order_book--wy_QP3QKove9La_15bmEK .scrolling_table_container::after {
+      margin: auto; }
+    [dir=ltr] .order_book--wy_QP3QKove9La_15bmEK .scrolling_table_container::after {
+    left: 0; }
+    [dir=rtl] .order_book--wy_QP3QKove9La_15bmEK .scrolling_table_container::after {
+      right: 0; } }
+  @media (min-width: 768px) {
+    .order_book--wy_QP3QKove9La_15bmEK {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; } }
+  @media (min-width: 1024px) {
+    .order_book--wy_QP3QKove9La_15bmEK {
+      width: 50%;
+      -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+              order: 4;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box; }
+    [dir] .order_book--wy_QP3QKove9La_15bmEK {
+      margin-bottom: -374px;
+      padding-bottom: 374px; } }
+  @media (min-width: 1600px) {
+    .order_book--wy_QP3QKove9La_15bmEK {
+      width: 40%; }
+      [dir] .order_book--wy_QP3QKove9La_15bmEK:only-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0; } }
+  @media (min-width: 1024px) and (min-height: 1784px) {
+    [dir] .order_book--wy_QP3QKove9La_15bmEK {
+      margin-bottom: calc(-1*((100vh - 288px)/4));
+      padding-bottom: calc(1*((100vh - 288px)/4)); } }
+  @media (min-width: 1600px) and (min-height: 1784px) {
+    [dir] .order_book--wy_QP3QKove9La_15bmEK {
+      margin-bottom: calc(-1*((100vh - 288px)/3));
+      padding-bottom: calc(1*((100vh - 288px)/3)); } }
+
+.buy_form--3wlSKECY8aKqZS5B7KMAUw,
+.sell_form--3EqIqUP7BXdkQjlbVN4pLw {
+  width: 100%; }
+  @media (min-width: 480px) {
+    .buy_form--3wlSKECY8aKqZS5B7KMAUw,
+    .sell_form--3EqIqUP7BXdkQjlbVN4pLw {
+      width: 50%; } }
+  @media (min-width: 768px) {
+    .buy_form--3wlSKECY8aKqZS5B7KMAUw,
+    .sell_form--3EqIqUP7BXdkQjlbVN4pLw {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
+  @media (min-width: 1024px) {
+    .buy_form--3wlSKECY8aKqZS5B7KMAUw,
+    .sell_form--3EqIqUP7BXdkQjlbVN4pLw {
+      width: 25%;
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; } }
+  @media (min-width: 1600px) {
+    .buy_form--3wlSKECY8aKqZS5B7KMAUw,
+    .sell_form--3EqIqUP7BXdkQjlbVN4pLw {
+      width: 20%; } }
+
+.orders_and_trades--2kArxMWDcBYXic8QGQP3W5 {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .orders_and_trades--2kArxMWDcBYXic8QGQP3W5 {
+      -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+              order: 4; } }
+  @media (min-width: 1024px) {
+    .orders_and_trades--2kArxMWDcBYXic8QGQP3W5 {
+      width: 100%;
+      -webkit-box-ordinal-group: 7;
+          -ms-flex-order: 6;
+              order: 6; } }
+  @media (min-width: 1600px) {
+    .orders_and_trades--2kArxMWDcBYXic8QGQP3W5 {
+      width: 60%; } }
+
+.time_аnd_sales--14idXA63hEMoZ__LWcU8IS {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .time_аnd_sales--14idXA63hEMoZ__LWcU8IS {
+      -webkit-box-ordinal-group: 7;
+          -ms-flex-order: 6;
+              order: 6; } }
+  @media (min-width: 1024px) {
+    .time_аnd_sales--14idXA63hEMoZ__LWcU8IS {
+      -webkit-box-ordinal-group: 6;
+          -ms-flex-order: 5;
+              order: 5;
+      width: 50%; } }
+  @media (min-width: 1600px) {
+    .time_аnd_sales--14idXA63hEMoZ__LWcU8IS {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 20%; } }
+
+.market_depth--3DXJXP2u5Gdc8X3TiNIOio {
+  width: 100%; }
+
+@media (min-width: 1024px) {
+  [dir] div[class*="not_authorized"] .order_book--wy_QP3QKove9La_15bmEK {
+    margin-bottom: -374px;
+    padding-bottom: 374px; } }
+
+@media (min-width: 1024px) and (min-height: 1784px) {
+  [dir] div[class*="not_authorized"] .order_book--wy_QP3QKove9La_15bmEK {
+    margin-bottom: calc(-1*((100vh - 288px)/3));
+    padding-bottom: calc((100vh - 288px)/3); } }
+
+@media (min-width: 1600px) {
+  div[class*="not_authorized"] .order_book--wy_QP3QKove9La_15bmEK {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7; }
+  [dir] div[class*="not_authorized"] .order_book--wy_QP3QKove9La_15bmEK {
+    margin-bottom: 0;
+    padding-bottom: 0; } }
+
+div[class*="not_authorized"] .orders_and_trades--2kArxMWDcBYXic8QGQP3W5 {
+  display: none; }
+
+[dir] .spinner_primary--2ojSCRdweOpgcjLQoLYN5e, [dir] .spinner_warning--24fCMFFm0u4QlnqoLAPPyP {
+  text-align: center; }
+
+[dir=ltr] .spinner_primary--2ojSCRdweOpgcjLQoLYN5e, [dir=ltr] .spinner_warning--24fCMFFm0u4QlnqoLAPPyP {
+  margin-left: auto;
+  margin-right: auto; }
+
+[dir=rtl] .spinner_primary--2ojSCRdweOpgcjLQoLYN5e, [dir=rtl] .spinner_warning--24fCMFFm0u4QlnqoLAPPyP {
+  margin-right: auto;
+  margin-left: auto; }
+
+[dir] .spinner_primary--2ojSCRdweOpgcjLQoLYN5e div div {
+  background-color: #1EAA7D !important; }
+  [dir].theme-dark .spinner_primary--2ojSCRdweOpgcjLQoLYN5e div div {
+    background-color: #37997d !important; }
+
+[dir] .spinner_warning--24fCMFFm0u4QlnqoLAPPyP div div {
+  background-color: #e5ce63 !important; }
+  [dir].theme-dark .spinner_warning--24fCMFFm0u4QlnqoLAPPyP div div {
+    background-color: #e5ce63 !important; }
+

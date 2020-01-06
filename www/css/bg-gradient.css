@@ -1,0 +1,40 @@
+html {
+    background: #002250;
+}
+#fi {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-table;
+    background: #E4A8A8;
+    z-index: 2;
+    text-align: right;
+}
+#fi:after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+#se {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-table;
+    background: #FFF;
+    z-index: 2;
+}
+#se:after {
+    content: '';
+    width: 75%;
+    height: 100%;
+    background: #C8E9C0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

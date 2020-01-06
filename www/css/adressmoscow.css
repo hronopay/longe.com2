@@ -1,0 +1,95 @@
+body{margin:3px 0px 3px 0px;background:white}
+A{color:rgb(0,153,255);a:rgb(0,102,204);text-decoration-:none;font:11px Verdana,Arial}
+A.aa{color:rgb(0,153,255);a:rgb(0,102,204);text-decoration-:none;font:12px Verdana,Arial}
+A:hover{color:red;text-decoration-:underline}
+
+img{border:0}
+body,td,form,p,input,textarea{color:black;font:11px Verdana, Arial;text-align:justify;vertical-align:top}
+p,form{padding:0;margin:0;vertical-align:middle}
+.sel{font:11px Verdana, Arial;color:#333}
+
+td{vertical-align:middle}
+
+#L{text-align:left}
+#R{text-align:right}
+#C{text-align:center}
+#CT{text-align:center;vertical-align:top}
+#RB{text-align:right;vertical-align:bottom}
+#J{text-align:justify}
+#B{vertical-align:bottom}
+
+.cab TD{color:dimgray;font:11px Verdana, Arial;}
+#cabt{font:11px Verdana;color:gray;padding:0px 0px 0px 0px;border:1px solid #AAA}
+.cab A{color:rgb(0,102,204);text-decoration:underline;background:url('img/a.gif') no-repeat left;padding-left:9px}
+.cab A:hover{color:red;text-decoration:underline;background:url('img/ah.gif') no-repeat left;padding-left:9px}
+
+#mline{background:url('img/bgmline.gif') repeat-x top;}
+.mnu TD{padding-left:10px;color:black;font:12px Verdana, Arial}
+.mnu A{color:dimgray;font:12px Verdana, Arial;text-decoration:none;background:url('img/a.gif') no-repeat left;padding-left:9px;line-height:28px}
+.mnu A:hover{color:red;background:url('img/ah.gif') no-repeat left;padding-left:9px}
+ A.mn1{color:dimgray;text-decoration:none;background:url('img/a1.gif') no-repeat 10px;padding-left:20px;line-height:28px}
+ A.mn1:hover{color:red;background:url('img/a1h.gif') no-repeat 10px;padding-left:20px}
+
+.news{padding:5px 0px 3px 0px;color:rgb(102,102,102);font:11px Verdana, Arial;vertical-align:bottom}
+.news A{width:100%;text-align:right;font:11px Verdana, Aria}
+
+.BL{color:#333;padding:10px 10px 10px 0px;vertical-align:top}
+.BL p{color:#333;padding:5px 0px 5px 0px}
+.BL ul{color:red;margin:0px 10px 0px 35px; list-style-type:circle}
+.BL ul p{color:#333;text-indent:0px;}
+
+.tip{background:url(img/bgtip.gif) repeat-y;padding:2px 9px 2px 9px;color:#303030;vertical-align:top}
+.tip A, .dm A{font:bold 8pt Arial;color:rgb(31,126,158)}
+.tip A:hover, .dm A:hover{color:rgb(237,171,14);}
+#RB{text-align:right;vertical-align:bottom;height:99%}
+
+A.Zhome{background:url('img/home.gif') no-repeat;width:20px}
+A.Zhome:hover{background:url('img/home-a.gif') no-repeat}
+A.Zadd{background:url('img/add.gif') no-repeat;width:20px}
+A.Zadd:hover{background:url('img/add-a.gif') no-repeat}
+A.Zcontact{background:url('img/contact.gif') no-repeat;width:20px}
+A.Zcontact:hover{background:url('img/contact-a.gif') no-repeat}
+A.Zmap{background:url('img/map.gif') no-repeat;width:20px}
+A.Zmap:hover{background:url('img/map-a.gif') no-repeat}
+
+
+
+
+
+A.Eoffice{width:110px;background:url('img/office-mail.gif') no-repeat;}
+A.Eoffice:hover{background:url('img/office-mail-red.gif') no-repeat;}
+A.Esupport{width:110px;background:url('img/support-mail.gif') no-repeat;}
+A.Esupport:hover{background:url('img/support-mail-red.gif') no-repeat;}
+A.Emoney{width:110px;background:url('img/money-mail.gif') no-repeat;}
+A.Emoney:hover{background:url('img/money-mail-red.gif') no-repeat;}
+
+
+
+.FSinfo{font:11px Verdana, Arial;border:1px solid #e1e1e1;padding:0px 2px 0px 0px;}
+.FSDIVinfo {padding:5px 5px 15px 10px;background:#ffffe7;border-top:1px dotted #f1f1f1;border-bottom:2px solid #ececec;border-left:2px solid #f3f3f3;color:#444}
+.FSinfo LEGEND{padding:5px 10px 0px 50px;line-height:40px;background:url(img/message.gif) no-repeat 7px;font-weight:bold}
+.FSinfo UL{color:red;margin:10px 5px 10px 25px}
+.FSinfo UL p{color:#555}
+.dt{padding-left:20px}
+.dtt{padding-left:50px}
+.dt{padding-left:20px}
+.dtt{padding-left:50px}
+
+.Q td{text-align:center;font:11px Arial,Verdana;background:white;color:#333}
+#qz td{color:white;background:#acacac;font:bold;border-right:1px solid gray;border-bottom:1px solid gray}
+#qd{font:10px Verdana;color:white;background:#acacac;border-right:1px solid gray;border-bottom:1px solid gray}
+.ql td{background:#fcfcfc}
+
+li {color:#FF0000; }
+li span {color:#000000; }
+
+
+.str {
+	border: 1px solid red;
+	position:absolute;
+	width: 200px;
+	left: 10px;
+	top: 20px;
+	padding:5px;
+	background-color:#FFFF66;
+	}

@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Syncopate);
+
+body { 
+/*  background: black;*/
+  background: #002250;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+div {
+	border:1px solid #00AAFF; 
+	border-collapse:collapse; 
+	background-color:#0099FF;
+	font-size: 14px;
+	font-family: 'Syncopate', sans-serif;
+	line-height: 1.5;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding: 20px;
+	}
+
+.comment {
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-weight:100;
+	font-size:13px;
+	color:#eeeeee;
+	line-height: 0.7;
+	}
+
+a {
+  text-transform: uppercase;
+  color:#FFFFFF;
+  text-decoration:underline;
+}
+
+	
+input {
+	width:800px; 
+	height:30px; 
+	font-family:tahoma; 
+	font-size:11px; 
+	border:1px solid #00AAFF 
+	}
+
+.CreateAcc {
+	width: 120px;
+	background-color:#002250;
+	color:#FFFFFF;
+	border:1px solid white;
+	font-weight:bold;
+	}
+		
+.invisible {
+	display:none;
+	}
+
+.general {
+	margin: 30px 200px 20px 200px;
+	padding: 20px 100px 50px 100px;
+	}
+	
+#signUpWarning {
+	font-size:12px;
+	border: none;
+	line-height: 1;
+	}
+
+h1 {
+  display: inline-block;
+  font-size: 80px;
+  line-height: 0.9;
+  padding: 20px;
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    white,
+    #111
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 0.9;
+  padding: 20px;
+  font-family: 'Syncopate', sans-serif;
+  /*text-transform: uppercase;*/
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    white,
+    #222
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+h3 {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 0.9;
+  padding: 20px;
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    white,
+    #333
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+h4 {
+  display: inline-block;
+  font-size: 60px;
+  line-height: 0.9;
+  padding: 20px;
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    white,
+    #005
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+

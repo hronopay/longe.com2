@@ -1,0 +1,8 @@
+Options +Includes
+AddType text/html .shtml
+AddHandler server-parsed .html 
+php_value error_reporting 7
+AddType application/x-httpd-php .php  .phtml
+#AddDefaultCharset Off
+AddDefaultCharset UTF-8
+

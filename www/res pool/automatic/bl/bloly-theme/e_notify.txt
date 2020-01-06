@@ -1,0 +1,14 @@
+From: "%SERVER" <webmaster@%SERVER>
+To: "%NAME" <%EMAIL>
+Subject: Новый комментарий от %POSTER
+
+Уважаемый(ая) %NAME,
+
+Новый комментарий в Вашем блоге.
+Пользователь %POSTER написал(а):
+%TEXT
+
+%REFERER
+
+С уважением,
+Ваш Блог

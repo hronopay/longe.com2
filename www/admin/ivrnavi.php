@@ -1,0 +1,32 @@
+<div  id="MAIN13">
+	<div id="ENU13" class="poplinks">
+		<h2 align="left">Кабинет</h2>
+		<a href="cabinet.php?mode=current_stats">Cтатистика</a>
+		
+		<a href="cabinet.php?mode=data">Личные данные</a>
+		
+		<a href="cabinet.php?mode=changepass">Сменить пароль</a>
+		
+		<a href="cabinet.php?mode=payouts">Платежи</a>
+		
+		<a href="cabinet.php?mode=balance">Баланс</a>
+		
+		<a href="cabinet.php?mode=docs">Документы</a>
+		
+		<a href="cabinet.php?mode=docfiles">Загрузить файлы</a>
+		
+		<a href="cabinet.php?mode=files">Счета</a>
+
+		<a href="cabinet.php?mode=payshortchange">Логика услуги</a>
+		
+		<a href="cabinet.php?mode=b_requesites">Платежные реквизиты</a>
+		
+		<a href="cabinet.php?mode=get_money">Вывод Средств</a>
+
+		<a href="cabinet.php?mode=payshort">Оплата подключения</a>
+		
+		<a href="cabinet.php?mode=ticket">Обратная связь</a>
+		
+		<a href="logout.php">Выход</a>
+	</div>
+	</div>

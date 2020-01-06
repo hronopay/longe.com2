@@ -1,0 +1,56 @@
+#Options +Includes
+#AddType text/html .shtml
+#AddHandler server-parsed .html 
+#php_value error_reporting 7
+#AddType application/x-httpd-php .php  .phtml
+#AddDefaultCharset Off
+#AddDefaultCharset UTF-8
+#--------------------------------
+
+AddDefaultCharset utf-8
+
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+
+<FilesMatch "\.(ttf|otf|eot|svg)$" >
+    SetOutputFilter DEFLATE
+</FilesMatch>
+</ifModule>
+
+<ifModule mod_headers.c>
+	#кэшировать html и htm файлы на один день
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=43200"
+	</FilesMatch>
+	#кэшировать css, javascript и текстовые файлы на одну неделю
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	#кэшировать флэш и изображения на месяц
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png|ttf|otf|eot|woff|svg)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+	#отключить кэширование
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+  
+# редиректим с www. на без www.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+#RewriteRule ^(.*)$ cgi-glob/cgicgi.exe?q=$1 [L,QSA]
+#RewriteRule ^(.*)$ cgi-glob/cgi-1.exe?q=$1 [L,QSA]
+
+</IfModule>

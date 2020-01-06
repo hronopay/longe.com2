@@ -1,0 +1,102 @@
+п»ї<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+
+		<title>Custom Checkboxes, Custom Radio Buttons, Custom Select Lists</title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="checkbox, radio button, select, option, list, html, javascript, example" />
+		<meta name="description" content="Custom form elements to style HTML checkboxes, radio buttons and select lists." />
+
+		<script type="text/javascript" src="test.js"></script>
+
+		<link rel="stylesheet" href="form.css" media="screen" />
+		
+		<style type="text/css">
+			body {
+				padding: 20px;
+			}
+			p {
+				font: 1em/1.7em arial,sans-serif;
+			}
+			.third {
+				width: 30%;
+				float: left;
+			}
+			.clear {
+				clear: both;
+			}
+			.code {
+				font: 1.2em/1.7em monospace;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1><span lang="ru">Р”Р•РњРћ</span></h1>
+
+		<form method="post" action=".">
+			<div class="third left">
+				<p><input type="checkbox" name="1" class="styled" /> (styled)</p>
+				<p><input type="checkbox" name="2" class="styled" /> (styled)</p>
+				<p><input type="checkbox" name="3" /> (unstyled)</p>
+				<p><input type="checkbox" name="4" /> (unstyled)</p>
+
+			</div>
+			<div class="third left">
+				<p><input type="radio" name="5" value="1" class="styled" /> (styled)</p>
+				<p><input type="radio" name="5" value="2" class="styled" /> (styled)</p>
+				<p><input type="radio" name="6" value="1" /> (unstyled)</p>
+				<p><input type="radio" name="6" value="2" /> (unstyled)</p>
+
+			</div>
+			<div class="third left">
+				<p><select name="7" class="styled">
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+
+					<option value="5">Option 5</option>
+				</select></p>
+				<p><select name="8" style="width: 190px;">
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+
+					<option value="5">Option 5</option>
+				</select></p>
+				<p>Select lists appear unstyled in IE6 and some versions of Opera.</p>
+			</div>
+			<p class="clear" style="padding: 20px 0 50px;"><input type="submit" value="Submit" style="width: 200px;" /></p>
+		</form>
+		<p><input type="checkbox" class="styled" disabled="disabled" /> Disabled Unchecked</p>
+		<p style="padding: 0 0 50px;"><input type="radio" class="styled" checked="checked" disabled="disabled" /> Disabled Checked</p>
+
+		<p><input type="checkbox" class="styled" /> Unchecked</p>
+
+		<p style="padding: 0 0 50px;"><input type="checkbox" class="styled" checked="checked" /> Checked</p>
+
+		<p><input type="radio" name="1" class="styled" /> Unchecked</p>
+		<p style="padding: 0 0 50px;"><input type="radio" name="1" class="styled" checked="checked" /> Checked</p>
+		<p><input type="radio" name="2" class="styled" /> Unchecked</p>
+		<p style="padding: 0 0 50px;"><input type="radio" name="2" class="styled" /> Unhecked</p>
+		<p style="padding: 0 0 50px;"><select class="styled" name="who">
+			<option>Who</option>
+			<option selected="selected">What</option>
+			<option>When</option>
+			<option>Where</option>
+
+			<option>How</option>
+		</select></p>
+		<p style="padding: 0 0 50px;"><select class="styled" name="this">
+			<option>This</option>
+			<option>That</option>
+			<option>These</option>
+			<option>Those</option>
+			<option>Theirs</option>
+
+		</select></p>
+		</body>
+</html>
