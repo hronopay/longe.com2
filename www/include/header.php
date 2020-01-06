@@ -19,6 +19,10 @@ include("functions.php");
 	}
 	
 ?>
+
+	<link href="jquery-ui.css" rel="stylesheet">
+
+
 </head>
 <body>
 

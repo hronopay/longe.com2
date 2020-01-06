@@ -13,6 +13,12 @@ open_connection();
 <form id="form2" name="regclient"  action="registration.php" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
 
 	<div align="left">
+	
+		<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+	</div>
+
 		Personal account type <span class="comment">- Trade as an individual </span><br>
 		Corporate account type<span class="comment">- Trade on behalf of your business </span>
 	</div>
@@ -63,6 +69,13 @@ open_connection();
 	var data = new Date;
 	document.getElementById('id_num').value = data.getTime().toString().substr(7);
 -->
+</script>
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+$( "#radioset" ).buttonset();
 </script>
 
                                        
