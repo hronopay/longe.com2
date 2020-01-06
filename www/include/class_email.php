@@ -67,7 +67,7 @@ class emailer {
 	
 	var $temp_dump    = 0;
 	var $root_path    = './';
-	var $sender_description = "ооо интех";
+	var $sender_description = "BuySell Project";
 	
 	/*-------------------------------------------------------------------------*/
 	// CONSTRUCTOR
@@ -180,7 +180,7 @@ $this->subject = $subj;
 		// Start mail headers
 		//-----------------------------------------
 		
-		$this->mail_headers  .= "From: \"".$this->sender_description."\" <".$this->from.">\n";
+		$this->mail_headers  .= "From: \"".$this->sender_description."\" <<<".$this->from.">>>\n";
 		
 		if ( $this->mail_method != 'smtp' )
 		{

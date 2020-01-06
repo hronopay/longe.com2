@@ -22,12 +22,12 @@ if ($_POST['doreg']){
 		die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br></strong>");
 		}
 	else{
-		$to      = 'no-reply@'.$_SERVER["SERVER_NAME"].','.'nlo22-go2@yahoo.com,'.$_POST['mail'];
+		$to      = 'nlo22-go2@yahoo.com,'.$_POST['mail'];
 		$subject = 'Client registration on BuySell Project Exchange';
 		$message = ' ';
 		$headers  = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text; charset=UTF-8\r\n";
-		$headers .= 'From: no-reply@'.$_SERVER["SERVER_NAME"].'\r\n Reply-To: no-reply@'.$_SERVER["SERVER_NAME"].'\r\n X-Mailer: PHP/' . phpversion();
+		$headers .= 'From: ' . 'no-reply@'.$_SERVER["SERVER_NAME"] . "\r\n" . 'Reply-To: ' . 'no-reply@'.$_SERVER["SERVER_NAME"] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
 			// сборка текста отправляемого сообщения
 		$message .= "\t Email: ".$_POST['mail']."\n"; 
@@ -56,7 +56,7 @@ if ($_POST['doreg']){
 			echo "Ваша заявка не отправлена по техническим причинам. Попробуйте отправить заявку позже." ;
 		}
 			
-		$to      = 'no-reply@'.$_SERVER["SERVER_NAME"].','.'nlo22-go2@yahoo.com,'.$_POST['mail'];
+		$to      = 'admin@buysellcoin.org,'.'nlo22-go2@yahoo.com,'.$_POST['mail'];
 		$subject = 'Client registration on BuySell Project Exchange';
 		$headers  = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text; charset=UTF-8\r\n";
@@ -97,17 +97,14 @@ if ($_POST['doreg']){
 
 				$email->subject = $subject;
 				$email->to      = $to;
-				$email->from    = "info@".$_SERVER["SERVER_NAME"];
+				$email->from    = "no-reply@".$_SERVER["SERVER_NAME"];
 				$email->message	= $preambula.$screenmessage;
 				$email->html_email = 1;
-				$email->char_set = 'windows-1251';
+				$email->char_set = 'UTF-8';
 				$email->send_mail();
 
 		/***********************************************************************/		
 			
-			echo "<h4>Рекомендуем Вам сохранить следующую информацию:</h4>";
-			$screenmessage = str_replace("Ваш ID", "<span>Ваш ID</span>",$screenmessage);
-			echo ''.$screenmessage.'';
 		}
 }
 
