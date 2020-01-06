@@ -20,7 +20,7 @@ include("functions.php");
 	
 ?>
 
-	<link href="jquery-ui.css" rel="stylesheet">
+	<link href="../css/jquery-ui.css" rel="stylesheet">
 
 
 </head>

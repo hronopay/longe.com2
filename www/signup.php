@@ -12,16 +12,12 @@ open_connection();
 
 <form id="form2" name="regclient"  action="registration.php" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
 
-	<div align="left">
 	
-		<div id="radioset">
-		<input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
-		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+		<div id="radioset" align="left">
+		<input type="radio" id="radio1" name="radio" value="ind" checked="checked"><label for="radio1">Personal account type <span class="comment">- Trade as an individual </span></label>
+		<input type="radio" id="radio2" name="radio" value="ind"><label for="radio2">Corporate account type<span class="comment">- Trade on behalf of your business </span></label>
 	</div>
 
-		Personal account type <span class="comment">- Trade as an individual </span><br>
-		Corporate account type<span class="comment">- Trade on behalf of your business </span>
-	</div>
 
 	<div align="left">
 		<strong>E-mail address</strong><br>
@@ -71,17 +67,14 @@ open_connection();
 -->
 </script>
 
-<script src="external/jquery/jquery.js"></script>
-<script src="jquery-ui.js"></script>
+<?php 
+	close_connection();
+	include('include/footer.php');
+//-------------------------------------------------- IMPORTANT !!! --------------------------------------------------------------	
+// The js functions should be placed below 	 "include('include/footer.php');" instuction as the jquery libs are in footer.php now
+//-------------------------------------------------------------------------------------------------------------------------------	
+?>
 
 <script>
 $( "#radioset" ).buttonset();
 </script>
-
-                                       
-									 
-
-<?php 
-	close_connection();
-	include('include/footer.php'); 
-?>
