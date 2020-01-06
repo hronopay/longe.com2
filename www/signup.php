@@ -25,7 +25,7 @@ open_connection();
 	</div>
 
 	<div align="left">
-		<strong>Password </strong><span class="comment">(must be a Strong password at least 12 characters long):</span><br>
+		<strong>Password </strong><span class="comment">(must be a <span style="font-style:italic; ">Strong</span> password at least 12 characters long):</span><br>
 		<input size="14" type="text" name="phone" maxlength="20">
 	</div>
 		

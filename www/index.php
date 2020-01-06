@@ -10,6 +10,9 @@ if(isset($_GET['q']) AND trim($_GET['q'])){
 	elseif($_GET['q'] == 'signup'){
 		include('signup.php');
 	}
+	elseif($_GET['q'] == 'registration'){
+		include('registration.php');
+	}
 	else{
 	echo  "</h1>ДРУГАЯ страница<br>".$_GET['q']."</h1>";
 	//include('HitBTC.php');
