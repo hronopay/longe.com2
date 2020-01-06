@@ -10,7 +10,7 @@ open_connection();
 
 <h3>Create an Account</h3>
 
-<form id="form2" name="regclient"  action="registration.php" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
+<form id="form2" name="regclient"  action="registration" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
 
 	
 		<div id="radioset" align="left">
@@ -21,12 +21,12 @@ open_connection();
 
 	<div align="left">
 		<strong>E-mail address</strong><br>
-		<input maxlength="45"  size="14" type="text" name="mail">
+		<input maxlength="100"  type="text" name="mail">
 	</div>
 
 	<div align="left">
 		<strong>Password </strong><span class="comment">(must be a <span style="font-style:italic; ">Strong</span> password at least 12 characters long):</span><br>
-		<input size="14" type="text" name="phone" maxlength="20">
+		<input type="password" name="phone" maxlength="200">
 	</div>
 		
 
@@ -38,9 +38,6 @@ open_connection();
 		<strong>Current time:</strong><br>
 		<?php echo $filledin = date("20y-m-d");  echo ' '; echo $filledin_hm = date("H:i:s"); ?>
 	</div>
-
-    <div align="left" class="invisible"></div>
-    <div align="left" class="invisible"></div>
 
 	<input name="id" type="hidden" value="<?php echo $ti; ?>">
 	<input name="filledin" type="hidden" value="<?php echo $filledin; ?>">
