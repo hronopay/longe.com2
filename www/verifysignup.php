@@ -8,7 +8,7 @@ open_connection();
 
 '<div class="general">
 <h3>Verify Your Email Address</h3>
-	<div align="left"><span class="verifyemail" style="font-size:14px; "><strong>
+	<div align="left"><span class="verifyemail"><strong>
 		A verification email has been sent to <span style="color:#66FF66; "> '.$_POST['mail'].'</span>.<br>
 		Please open the email and click on the "Verify" button to confirm that the email address belongs to you.
 		<br><br>
