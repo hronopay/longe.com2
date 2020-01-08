@@ -32,9 +32,9 @@ div {
 .verifyemail {
 	font-family:sans-serif;
 	font-weight:200;
-	/*font-size:17px;*/
-	font-size-adjust:17px;
+	font-size:17px;
 	color:#cceeff;
+	line-height: 1;
 	}
 
 a {
