@@ -49,10 +49,76 @@ if ($_POST['doreg']){
 		//die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br></strong>");
 		}
 	else{
-		$qins = "INSERT INTO `registration` ( `user_id` , `userlogin` , `payed` , `pass_hash` , `fio` , `mail` , `icq` , `tele_concact` , `additional` , `code` , `partner_num` , `redir_num` , `vremya1` , `vremya2` , `partner_type` , `origname` , `startdate` , `enddate`,  `type` ,  `tarif` ,  `okrug` ,  `id` ,  `filledin` ,  `filledin_hm` ,  `camefrom`,  `wmpurse` ) VALUES ( '', 'login', '', '".md5($pass)."', '', '".$_POST['mail']."', '', '".$_POST['phone']."', '', 'code', '', '', '', '', '', '', '', '', '', '', '', '".$_POST['id']."', '".$_POST['filledin']."', '".$_POST['filledin_hm']."', '".$_COOKIE["ivrcustref"]."', '' )";
+		$qins = "INSERT INTO `registration` ( 
+		`user_id` , 
+		`userlogin` , 
+		`pass_hash` , 
+		`code` , 
+		 `id` , 
+		 `filledin` , 
+		 `filledin_hm` , 
+		 `camefrom`, 
+		 ) 
+		
+		VALUES ( 
+		'', 
+		'".$_POST['mail']."', 
+		'".md5($pass)."', 
+		'code', 
+		'".$_POST['id']."', 
+		'".$_POST['filledin']."', 
+		'".$_POST['filledin_hm']."', 
+		'".$_COOKIE["ivrcustref"]."', 
+		)";
 		sql_do($qins);
 			//    if ( !isset($_COOKIE["ivrcustref"]) )   camefrom
-		$qins1 = "INSERT INTO `users_ivr` ( `user_id` , `userlogin` , `payed` , `pass_hash` , `fio` , `mail` , `icq` , `tele_concact` , `additional` , `code` , `partner_num` , `redir_num` , `vremya1` , `vremya2` , `partner_type` , `origname` , `startdate` , `enddate`,  `type` ,  `activationdate` ,  `activationtime` ,  `wmpurse` ) VALUES ( '', '".$_POST['id']."', '', '".md5($pass)."', '', '".$_POST['mail']."', '', '".$_POST['phone']."', '', 'code', '', '', '', '', '', '', '', '', '', '".$_POST['filledin']."', '".$_POST['filledin_hm']."', '' )";
+		$qins1 = "INSERT INTO `users_ivr` ( 
+		`user_id` , 
+		`userlogin` , 
+		`payed` , 
+		`pass_hash` , 
+		`fio` , 
+		`mail` , 
+		`icq` , 
+		`tele_concact` , 
+		`additional` , 
+		`code` , 
+		`partner_num` , 
+		`redir_num` , 
+		`vremya1` , 
+		`vremya2` , 
+		`partner_type` , 
+		`origname` , 
+		`startdate` , 
+		`enddate`, 
+		 `type` , 
+		 `activationdate` , 
+		 `activationtime` , 
+		 `wmpurse` 
+		 ) 
+		
+		VALUES ( '', 
+		'".$_POST['id']."', 
+		'', 
+		'".md5($pass)."', 
+		'', 
+		'".$_POST['mail']."', 
+		'', 
+		'".$_POST['phone']."', 
+		'', 
+		'code', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'', 
+		'".$_POST['filledin']."', 
+		'".$_POST['filledin_hm']."', 
+		'' )";
 		sql_do($qins1);
 
 
