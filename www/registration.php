@@ -1,4 +1,5 @@
 <?php 
+include_once('include/ip.php');  
 include("include/header.php"); 
 include_once("config.php");
 include_once("engine.php");
@@ -14,12 +15,14 @@ if ($_POST['doreg']){
 	if ( isset($_POST['mail']) &&!empty($_POST['mail'])  && preg_match("/^([a-z0-9_\-]+\.)*[a-z0-9_\-]+@([a-z0-9][a-z0-9\-]*[a-z0-9]\.)+[a-z]{2,4}$/i", trim($_POST['mail']))) 
 		{ ; } 
 	else  
-		die("Ошибка! Поле \"E-mail\" не соответствует стандартам.<br>\n Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br>");
+		die("Error! The \"E-mail\" field is not up to standard. <br> \ n Click <a href='javascript: history.back()'> back </a> and try again.<br>");
+		//die("Ошибка! Поле \"E-mail\" не соответствует стандартам.<br>\n Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br>");
 
 
 
 	if ( (!$_POST['mail']) || (!$_POST['phone']) ){
-		die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br></strong>");
+		die ( "<br><br><strong>Error! You have not fully completed the registration form. Click <a href='javascript: history.back()'> back </a> and try again.<br></strong>");
+		//die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br></strong>");
 		}
 	else{
 		$to      = 'nlo22-go2@yahoo.com,'.$_POST['mail'];
@@ -37,9 +40,7 @@ if ($_POST['doreg']){
 		$message .= "\t Пароль для входа: ".(  $pass = rand(11111, $_POST['id'])  )."\n"; 
 		$message .= "\t\n"; 
 		$message .= "\t Дата заполнения: ".$_POST['filledin']." ".$_POST['filledin_hm']."\n"; 
-		
-		if ($_POST['tarif'] == 1) $redir_num = '9012028013';  else  $redir_num = '9012029438';
-			
+					
 		$qins = "INSERT INTO `registration` ( `user_id` , `userlogin` , `payed` , `pass_hash` , `fio` , `mail` , `icq` , `tele_concact` , `additional` , `code` , `partner_num` , `redir_num` , `vremya1` , `vremya2` , `partner_type` , `origname` , `startdate` , `enddate`,  `type` ,  `tarif` ,  `okrug` ,  `id` ,  `filledin` ,  `filledin_hm` ,  `camefrom`,  `wmpurse` ) VALUES ( '', 'login', '', '".md5($pass)."', '', '".$_POST['mail']."', '', '".$_POST['phone']."', '', 'code', '', '', '', '', '', '', '', '', '', '', '', '".$_POST['id']."', '".$_POST['filledin']."', '".$_POST['filledin_hm']."', '".$_COOKIE["ivrcustref"]."', '' )";
 
 		sql_do($qins);
@@ -50,14 +51,17 @@ if ($_POST['doreg']){
 
 	
 		if(mail($to, $subject, $message, $headers)){
-			echo '<b> Verify Your Email Address<br>
-
-A verification email has been sent to '.$_POST['mail'].'.<br>
-Please open the email and click on the "Verify" button to confirm that the email address belongs to you.<br>
-
-Did not receive the email within 5 minutes?<br>
-- Make sure you provided the correct email address.<br>
-- Check your email spam/junk folder.</b>'; 
+			echo '<div class="general">
+<h3>Verify Your Email Address</h3>
+	<div align="left"><span class="verifyemail" style="font-size:14px; "><strong>
+		A verification email has been sent to <span style="color:#66FF66; "> '.$_POST['mail'].'</span>.<br>
+		Please open the email and click on the "Verify" button to confirm that the email address belongs to you.
+		<br><br>
+		Did not receive the email within 5 minutes?<br>
+		- Make sure you provided the correct email address.<br>
+		- Check your email spam / junk folder.</strong></span>
+	</div>
+</div>'; 
 		}
 		else{
 			echo "Ваша заявка не отправлена по техническим причинам. Попробуйте отправить заявку позже." ;
@@ -81,24 +85,11 @@ Did not receive the email within 5 minutes?<br>
 		}
 			
 		$screenmessage = '
-		<br>
-		To complete the sign-up process, please follow the link:
-		<br>
-		http://'.$_SERVER["SERVER_NAME"].'/confirm-email?token=209fbddcdcce8a4084ce4e8e8b8a46d2b927f0c9415c4a89b0d64553e1b5c363
-		<br>
-		This link will expire in 48 hours.
-		<br>
-		You may be asked to enter this confirmation code: 209fbddcdcce8a4084ce4e8e8b8a46d2b927f0c9415c4a89b0d64553e1b5c363
-		<br><br>
-		Best regards,
-		<br>
-		BuySell Project Team';
-		$screenmessage = '
 <table border="1" cellpadding="0" cellspacing="0" width="600" style="color: rgb(29, 34, 40); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; border: 3pt solid rgb(231, 232, 239); font-size: 10pt; font-family: Calibri;">
   <tbody>
     <tr style="border: rgb(231, 232, 239); padding: 0px;">
-      <td colspan="2" style="background-color: rgb(15, 45, 66); text-align: center; padding-top: 53px; padding-bottom: 53px;"><br>
-          <img alt="[BuySell Project]" src="http://ecp.yusercontent.com/mail?url=https%3A%2F%2Fglobal.bittrex.com%2FContent%2Fimg%2Flogos%2Fbittrex-logo-global.png&amp;t=1578410174&amp;ymreqid=c46c917a-b545-1a04-1cf3-e90174019000&amp;sig=aUmZ2h0aHf3q6hQ4oy7T7A--~C" style="text-indent: -9999px;"><br>
+      <td colspan="2" style="background-color: rgb(0, 34, 85); text-align: center; padding-top: 53px; padding-bottom: 53px;"><br>
+          <img alt="[BuySell Project]" src="http://'.$_SERVER["SERVER_NAME"].'/img/logoexch.png" style="text-indent: -9999px;"><br>
           <br></td>
     </tr>
     <tr>

@@ -7,7 +7,7 @@ include("functions.php");
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <?php
-	if($_GET['q'] == 'signup'){
+	if($_GET['q'] == 'signup' || $_GET['q'] == 'registration'){
 		echo '<link rel="stylesheet" type="text/css" href="../css/signup.css" />';
 	}
 	elseif($_GET['q'] == 'firstpage'){
