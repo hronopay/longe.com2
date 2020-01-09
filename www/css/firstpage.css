@@ -1,11 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Syncopate);
 
 body { 
-/*  background: black;*/
   background: #002250;
   text-align: center;
   padding: 120px 20px;
 }
+
+
+#lang {
+	font-size: 10px;
+	font-family: sans-serif;
+	line-height: 1;
+	color:#cccccc;
+	}
+
 
 h1 {
   display: inline-block;
@@ -88,7 +96,6 @@ h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 
 
