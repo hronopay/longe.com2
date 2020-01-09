@@ -9,7 +9,7 @@ open_connection();
 
 <h3><?php echo $t8; ?></h3>
 
-<form id="form2" name="regclient"  action="registration" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
+<form id="form2" name="regclient"  action="registration" enctype="multipart/form-data" method="post">
 
 	
 		<div id="radioset" align="left">
