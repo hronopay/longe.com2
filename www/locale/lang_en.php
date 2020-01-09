@@ -7,7 +7,15 @@ $t4 = 'Learn more';
 $t5 = 'Sign In';
 $t6 = 'Sign Up';
 $t7 = 'Market';
-$t8 = 'BuySell';
-$t9 = 'BuySell';
-$t10 = 'BuySell';
+$t8 = 'CREATE AN ACCOUNT';
+$t9 = 'Personal account type <span class="comment">- Trade as an individual </span>';
+$t10 = 'Corporate account type<span class="comment">- Trade on behalf of your business </span>';
+$t11 = 'E-mail address';
+$t12 = '<strong>Password </strong><span class="comment">(must be a <span style="font-style:italic; ">Strong</span> password at least 12 characters long):</span>';
+$t13 = 'Create Account';
+$t14 = 'Already have an account? <a href="login" >Log in</a><br><br>We are committed to complying with all applicable regulations that help prevent, detect and remediate unlawful behavior by customers and virtual asset developers when using the BuySell Project trading platform or any other BuySell Project services.';
+$t15 = 'We are committed to complying with all applicable regulations that help prevent, detect and remediate unlawful behavior by customers and virtual asset developers when using the BuySell Project trading platform or any other BuySell Project services.';
+$t16 = 'BuySell';
+$t17 = 'BuySell';
+$t18 = 'BuySell';
 ?>

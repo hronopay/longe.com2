@@ -7,24 +7,24 @@ open_connection();
 
 <div class="general">
 
-<h3>Create an Account</h3>
+<h3><?php echo $t8; ?></h3>
 
 <form id="form2" name="regclient"  action="registration" enctype="multipart/form-data" method="post" onsubmit="if(document.regclient.licence.value != 'YES' || document.regclient.licence.value == ''){alert('Вы не подтвердили согласия на тестовый период подключения');return false}">
 
 	
 		<div id="radioset" align="left">
-		<input type="radio" id="radio1" name="radio" value="ind" checked="checked"><label for="radio1">Personal account type <span class="comment">- Trade as an individual </span></label>
-		<input type="radio" id="radio2" name="radio" value="ind"><label for="radio2">Corporate account type<span class="comment">- Trade on behalf of your business </span></label>
+		<input type="radio" id="radio1" name="radio" value="ind" checked="checked"><label for="radio1"><?php echo $t9; ?></label>
+		<input type="radio" id="radio2" name="radio" value="ind"><label for="radio2"><?php echo $t10; ?></label>
 	</div>
 
 
 	<div align="left">
-		<strong>E-mail address</strong><br>
+		<strong><?php echo $t11; ?></strong><br>
 		<input maxlength="100"  type="text" name="mail">
 	</div>
 
 	<div align="left">
-		<strong>Password </strong><span class="comment">(must be a <span style="font-style:italic; ">Strong</span> password at least 12 characters long):</span><br>
+		<?php echo $t12; ?><br>
 		<input type="password" name="phone" maxlength="100">
 	</div>
 		
@@ -42,16 +42,11 @@ open_connection();
 	<input name="filledin" type="hidden" value="<?php echo $filledin; ?>">
 	<input name="filledin_hm" type="hidden" value="<?php echo $filledin_hm; ?>">
 
-	<input class="CreateAcc" type="submit" name="doreg" value="Create Account" align="left">
+	<input class="CreateAcc" type="submit" name="doreg" value="<?php echo $t13; ?>" align="left">
 </form>
 
-	<div id="signUpWarning" align="left">
-	<span class="comment">Already have an account?</span> 
-	<a href="login" >Log in</a>
-<br>
-<br>
-     
-	 <span class="comment">We are committed to complying with all applicable regulations that help prevent, detect and remediate unlawful behavior by customers and virtual asset developers when using the BuySell Project trading platform or any other BuySell Project services.</span>
+	<div class="comment" align="left">
+	<?php echo $t14; ?>
 	</div>
 
 </div> 
