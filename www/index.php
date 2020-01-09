@@ -1,6 +1,8 @@
 <?php 
 
-#include('include/header.php'); 
+if (!$_COOKIE['lang'] || $_COOKIE['lang']=='en') 	include('locale/lang_en.php');
+elseif($_COOKIE['lang']=='ru')  					include('locale/lang_ru.php');
+else 												include('locale/lang_en.php');
 
 
 if(isset($_GET['q']) AND trim($_GET['q'])){  
