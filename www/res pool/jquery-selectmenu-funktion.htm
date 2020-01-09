@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <style type="text/css">
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).on("pageinit", function () {
+            $(".select_choice").on("change", function () {
+                alert($(this).val())
+            });
+        });
+         
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="e" id="home">
+        <div data-role="header">
+            <h1>SELECT VALUE</h1>
+        </div>
+        <div data-role="content">
+           <div data-role="fieldcontain"> 
+        <select  class="select_choice" data-native-menu="false">
+            <option value="standard">Standard: 7 day</option>
+            <option value="rush" disabled="disabled">Rush: 3 days</option>
+            <option value="express">Express: next day</option>
+            <option value="overnight">Overnight</option>
+        </select>
+    </div>
+        </div> 
+    </div>
+</body>
+</html>
+
