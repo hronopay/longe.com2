@@ -1,6 +1,5 @@
 <?php  
-include_once('include/ip.php');  
-include("include/header.php"); 
+include_once("include/header.php"); 
 include_once("config.php");
 include_once("engine.php");
 open_connection();

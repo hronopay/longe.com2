@@ -1,9 +1,4 @@
 <?php 
-if($_GET["language"] == 'ru' || $_REQUEST["language"] == 'ru') setcookie("lang","ru");
-elseif($_GET["language"] == 'chi' || $_REQUEST["language"] == 'chi') setcookie("lang","chi");
-else setcookie("lang","en");
-
-//$redirectPage = str_replace('q=','',$_SERVER["QUERY_STRING"]);
 $redirectPage = $_REQUEST['q'];
 if(!$redirectPage)$redirectPage = 'firstpage';
 

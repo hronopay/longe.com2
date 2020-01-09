@@ -35,7 +35,7 @@ alert(" Name : " + name  + " n Form Id : " + document.getElementById("form_id").
 </head>
 <body>
 
-<div id="lang1" style="position:absolute; left:1400px; top:10px; ">
+<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
 <form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
 <select id="selectmenu" name="language" onChange="form.submit();">
 	<option value="ru">Русский</option>

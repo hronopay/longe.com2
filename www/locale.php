@@ -5,7 +5,7 @@ if ($_COOKIE['lang']=='chi') 	{
 	$selectLangMenuRU = '';
 	$selectLangMenuCHI = ' selected="selected"';
 	$langMenu = '
-	<div id="lang1" style="position:absolute; left:1400px; top:10px; ">
+	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
 	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
 		<select id="selectmenu" name="language" onChange="form.submit();">
 			<option value="en" '.$selectLangMenuEN.'>English</option>
@@ -23,7 +23,7 @@ elseif($_COOKIE['lang']=='ru')  					{
 	$selectLangMenuRU = ' selected="selected"';
 	$selectLangMenuCHI = '';
 	$langMenu = '
-	<div id="lang1" style="position:absolute; left:1400px; top:10px; ">
+	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
 	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
 		<select id="selectmenu" name="language" onChange="form.submit();">
 			<option value="en" '.$selectLangMenuEN.'>English</option>
@@ -41,7 +41,7 @@ else 												{
 	$selectLangMenuRU = '';
 	$selectLangMenuCHI = '';
 	$langMenu = '
-	<div id="lang1" style="position:absolute; left:1400px; top:10px; ">
+	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
 	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
 		<select id="selectmenu" name="language" onChange="form.submit();">
 			<option value="en" '.$selectLangMenuEN.'>English</option>

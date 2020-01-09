@@ -1,4 +1,5 @@
 ﻿<?php 
+include_once('include/ip.php');  
 include("functions.php");
 ?>
 <!DOCTYPE html>
@@ -23,12 +24,12 @@ include("functions.php");
 <script src="js/jquery-ui.js"></script>
 <link href="../css/jquery-ui.css" rel="stylesheet">
 
-
 </head>
+
 <body>
-
-
-
-<?php // phpinfo(32);?>
+<?php 
+echo $langMenu;
+// phpinfo(32);
+?>
 
 

@@ -1,11 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Syncopate);
 
 body { 
-/*  background: black;*/
   background: #002250;
   text-align: center;
   padding: 20px 20px;
 }
+
+div.lang1 {
+	border:0px solid #002250; 
+	border-collapse:collapse; 
+	background-color:#002250;
+	font-size: 10px;
+	font-family: sans-serif;
+	padding: 1px;
+	}
 
 div {
 	border:1px solid #00AAFF; 
@@ -20,6 +28,7 @@ div {
 /*	border-radius: 20px/30px;*/
 	border-radius: 10px;
 	}
+
 
 .comment {
 	font-family:Geneva, Arial, Helvetica, sans-serif;

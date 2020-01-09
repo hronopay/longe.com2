@@ -15,7 +15,7 @@ echo '
 '.$langMenu.'
 
 
-<div style="position:absolute; left:165px; top:15px; ">
+<div style="position:absolute; left:'.$pos1.'px; top:15px; ">
 <h4>'.$t1.'</h4>
 </div>
 <div style="position:absolute; left:200px; top:85px; ">
@@ -40,7 +40,7 @@ echo '
 </div>
 
 
-<div style="position:absolute; left:710px; top:550px; ">
+<div style="position:absolute; left:720px; top:550px; ">
 <h3><a href="market">'.$t7.'</a></h3>
 </div>
 

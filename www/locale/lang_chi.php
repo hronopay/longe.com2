@@ -1,4 +1,5 @@
 <?php 
+$pos1 = '165';
 $t1 = '';
 $t2 ='抓住机会';
 $t3 ='BuySell <br>项目<br> Exchange';
