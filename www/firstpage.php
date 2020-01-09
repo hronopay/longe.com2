@@ -10,16 +10,9 @@ echo '
 <link rel="stylesheet" type="text/css" href="css/firstpage.css" />
 </head>
 <body>
-<div id="lang1" style="position:absolute; left:1400px; top:10px; ">
-<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
-<select id="selectmenu" name="language" onChange="form.submit();">
-	<option value="ru">Русский</option>
-	<option value="chi" >中国人</option>
-	<option value="en" selected="selected">English</option>
-</select>
-</form>
-</div>
 
+
+'.$langMenu.'
 
 
 <div style="position:absolute; left:165px; top:15px; ">

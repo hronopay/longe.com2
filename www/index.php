@@ -3,10 +3,12 @@ if($_GET["language"] == 'ru' || $_REQUEST["language"] == 'ru') setcookie("lang",
 elseif($_GET["language"] == 'chi' || $_REQUEST["language"] == 'chi') setcookie("lang","chi");
 else setcookie("lang","en");
 
-if (!$_COOKIE['lang'] || $_COOKIE['lang']=='en') 	include('locale/lang_en.php');
-elseif($_COOKIE['lang']=='ru')  					include('locale/lang_ru.php');
-else 												include('locale/lang_en.php');
+//$redirectPage = str_replace('q=','',$_SERVER["QUERY_STRING"]);
+$redirectPage = $_REQUEST['q'];
+if(!$redirectPage)$redirectPage = 'firstpage';
 
+
+include('locale.php');
 
 if(isset($_GET['q']) AND trim($_GET['q'])){  
 	if($_GET['q'] == 'market'){
@@ -26,9 +28,7 @@ if(isset($_GET['q']) AND trim($_GET['q'])){
 	}
 }
 else{
-	//echo  "<h1>главная страница<br>".$_GET['q']."</h1>";
 	include('firstpage.php');
-
 }
 
  

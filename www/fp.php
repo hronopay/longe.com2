@@ -42,6 +42,7 @@ alert(" Name : " + name  + " n Form Id : " + document.getElementById("form_id").
 	<option value="chi" >中国人</option>
 	<option value="en" selected="selected">English</option>
 </select>
+<input type="hidden" name="redirectPage" value="'.$redirectPage.'">
 </form>
 </div>
 
