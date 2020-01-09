@@ -19,8 +19,9 @@ include("functions.php");
 	}
 	
 ?>
-
-	<link href="../css/jquery-ui.css" rel="stylesheet">
+<script src="js/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<link href="../css/jquery-ui.css" rel="stylesheet">
 
 
 </head>

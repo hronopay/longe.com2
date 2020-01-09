@@ -68,7 +68,7 @@ open_connection();
 	close_connection();
 	include('include/footer.php');
 //-------------------------------------------------- IMPORTANT !!! --------------------------------------------------------------	
-// The js functions should be placed below 	 "include('include/footer.php');" instuction as the jquery libs are in footer.php now
+// The js functions should be placed below 	 "include('include/header.php');" instuction as the jquery libs are in footer.php now
 //-------------------------------------------------------------------------------------------------------------------------------	
 ?>
 

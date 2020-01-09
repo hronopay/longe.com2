@@ -7,10 +7,6 @@
 
 <link rel="stylesheet" type="text/css" href="css/firstpage.css" />
 <!--link href="jquery-ui.css" rel="stylesheet"-->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-
-<script src="external/jquery/jquery.js"></script>
-<script src="jquery-ui.js"></script>
 <script>
 //$( "#selectmenu" ).selectmenu();
 /*
