@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<!--link rel="stylesheet" type="text/css" href="css/firstpage.css" /-->
+<script src="js/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+    <p id="content_p"></p>
+    <form id="email_send">
+        <input type="email" id="ema" name="email" >
+        <button type="submit">Send</button>
+    </form>
+
+<script type="text/javascript">
+    $('#email_send').submit(function(){
+        var str = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url : "hello.php",
+            data: str,
+            success: function(html){
+                $('#content_p').html(html);
+            }
+        })
+        return false;
+    })
+    function show(){
+        $.ajax({
+            url: "time.php",
+            cache: false,
+            success: function(html){
+                $('#content_p').html(html);
+            }
+
+
+        });
+    }
+    setInterval('show()', 3000);
+</script>
+
+
+
+</body>
+</html>
+
+
