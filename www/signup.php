@@ -1,10 +1,15 @@
 <?php  
-include_once("include/header.php"); 
 include_once("config.php");
 include_once("engine.php");
 open_connection();
-?>
 
+include('locale_files.php');
+
+?>
+<script>
+$( "#radioset" ).buttonset();
+</script>
+<link rel="stylesheet" type="text/css" href="css/signup.css" />
 <div class="general">
 
 <h3><?php echo $t8; ?></h3>
@@ -13,7 +18,7 @@ open_connection();
 
 	
 		<div id="radioset" align="left">
-		<input type="radio" id="radio1" name="radio" value="ind" checked="checked"><label for="radio1"><?php echo $t9; ?></label>
+		<input type="radio" id="radio1" name="radio" value="ind" checked="checked"><label for="radio1"><?php echo $t9; ?></label><br>
 		<input type="radio" id="radio2" name="radio" value="ind"><label for="radio2"><?php echo $t10; ?></label>
 	</div>
 
@@ -61,11 +66,6 @@ open_connection();
 <?php 
 	close_connection();
 	include('include/footer.php');
-//-------------------------------------------------- IMPORTANT !!! --------------------------------------------------------------	
-// The js functions should be placed below 	 "include('include/header.php');" instuction as the jquery libs are in footer.php now
-//-------------------------------------------------------------------------------------------------------------------------------	
 ?>
 
-<script>
-$( "#radioset" ).buttonset();
-</script>
+

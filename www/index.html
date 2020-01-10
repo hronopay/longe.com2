@@ -26,11 +26,6 @@
             aFile = 'firstpage.php';
         }
     
-
-
-
-
-
         /* $.ajax({
             url: 'locale.php',
             cache: false,
@@ -39,21 +34,7 @@
             }
         }); */
 
-/*     function Locale(){
-        $('#lang_send').submit(function(){
-            var str = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url : "locale.php",
-                data: str,
-                success: function(html){
-                    $('#locale_sec').html(html);
-                }
-            })
-            //return false;
-        })
-    }
- */
+
  $(document).on('change', '#selectmenu', function() {
     var selected = $(this).val();
     var action = '';
@@ -77,13 +58,13 @@
 });
 
     //function show(){
-        $.ajax({
+/*         $.ajax({
             url: aFile,
             cache: false,
             success: function(html){
                 $('#content_sec').html(html);
             }
-        });
+        }); */
     //}
 
     function show_content(){
@@ -103,7 +84,7 @@
 
 
 </head>
-<body>
+<body onload="show_content()">
     <section id="locale_sec">
         <div class="lang1" style="position:absolute; left:1400px; top:10px; ">
             <form id="lang_send">

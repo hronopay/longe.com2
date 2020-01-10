@@ -30,7 +30,7 @@ $checkCode = '';
 
 
 $form = '
-	<div  style="position:absolute; left:1400px; top:10px; ">
+	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
 		<form id="lang_send">
 			<select id="selectmenu">
 				<option value="en" '.$selectLangMenuEN.'>English</option>
