@@ -1,58 +1,46 @@
-<?php 
-if ($_COOKIE['lang']=='chi') 	{
-	include('locale/lang_chi.php');
+<?php
+if($_POST["postID"] == 'ru' || $_REQUEST["postID"] == 'ru') 
+	setcookie("lang","ru");
+elseif($_POST["postID"] == 'chi' || $_REQUEST["postID"] == 'chi') 
+	setcookie("lang","chi");
+else 
+	setcookie("lang","en");
+
+$select = $_POST["postID"];
+
+if ($select=='chi') 	{
 	$selectLangMenuEN = '';
 	$selectLangMenuRU = '';
 	$selectLangMenuCHI = ' selected="selected"';
-	$langMenu = '
-	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
-	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
-		<select id="selectmenu" name="language" onChange="form.submit();">
-			<option value="en" '.$selectLangMenuEN.'>English</option>
-			<option value="ru" '.$selectLangMenuRU.'>Русский</option>
-			<option value="chi" '.$selectLangMenuCHI.'>中国人</option>
-		</select>
-		<input type="hidden" name="redirectPage" value="'.$redirectPage.'">
-	</form>
-	</div>
-	';
 }
-elseif($_COOKIE['lang']=='ru')  					{
-	include('locale/lang_ru.php');
+elseif($select=='ru')  					{
 	$selectLangMenuEN = '';
 	$selectLangMenuRU = ' selected="selected"';
 	$selectLangMenuCHI = '';
-	$langMenu = '
-	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
-	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
-		<select id="selectmenu" name="language" onChange="form.submit();">
-			<option value="en" '.$selectLangMenuEN.'>English</option>
-			<option value="ru" '.$selectLangMenuRU.'>Русский</option>
-			<option value="chi" '.$selectLangMenuCHI.'>中国人</option>
-		</select>
-		<input type="hidden" name="redirectPage" value="'.$redirectPage.'">
-	</form>
-	</div>
-	';
 }
 else 												{
-	include('locale/lang_en.php');
 	$selectLangMenuEN = ' selected="selected"';
 	$selectLangMenuRU = '';
 	$selectLangMenuCHI = '';
-	$langMenu = '
-	<div class="lang1" style="position:absolute; left:1400px; top:10px; ">
-	<form id="language1" action="langcookie.php" method="get" name="checklang" enctype="text/plain">
-		<select id="selectmenu" name="language" onChange="form.submit();">
-			<option value="en" '.$selectLangMenuEN.'>English</option>
-			<option value="ru" '.$selectLangMenuRU.'>Русский</option>
-			<option value="chi" '.$selectLangMenuCHI.'>中国人</option>
-		</select>
-		<input type="hidden" name="redirectPage" value="'.$redirectPage.'">
-	</form>
-	</div>
-	';
 }
+
+
+$checkCode = '<br>postID = '.$_POST["postID"].' <br>_COOKIE = '.$_COOKIE["lang"].'<br>'.date("H:i:s");
+$checkCode = '';
+
+
+$form = '
+	<div  style="position:absolute; left:1400px; top:10px; ">
+		<form id="lang_send">
+			<select id="selectmenu">
+				<option value="en" '.$selectLangMenuEN.'>English</option>
+				<option value="ru" '.$selectLangMenuRU.'>Русский</option>
+				<option value="chi" '.$selectLangMenuCHI.'>中国人</option>
+			</select>
+		</form>'.$checkCode.' 
+		</div>
+';
+echo  $form;
 
  ?>
 

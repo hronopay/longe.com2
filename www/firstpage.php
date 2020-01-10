@@ -1,18 +1,8 @@
 <?php 
+include('locale_files.php');
 echo '
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-
-
 <link rel="stylesheet" type="text/css" href="css/firstpage.css" />
-</head>
-<body>
 
-
-'.$langMenu.'
 
 
 <div style="position:absolute; left:'.$pos1.'px; top:15px; ">

@@ -7,44 +7,116 @@
 <script src="js/external/jquery/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
 <link href="../css/jquery-ui.css" rel="stylesheet">
-</head>
-<body>
-
-    <p id="content_p"></p>
-    <form id="email_send">
-        <input type="email" id="ema" name="email" >
-        <button type="submit">Send</button>
-    </form>
 
 <script type="text/javascript">
-    $('#email_send').submit(function(){
-        var str = $(this).serialize();
-        $.ajax({
-            type: "POST",
-            url : "hello.php",
-            data: str,
-            success: function(html){
-                $('#content_p').html(html);
-            }
-        })
-        return false;
-    })
-    function show(){
-        $.ajax({
-            url: "time.php",
+    var str = window.location.pathname.replace("/","");
+    if(str=='index.html') str='';
+    console.log( str );
+
+        if(str == 'market'){
+            aFile = 'exchange/BTC-USDT.php';
+        }
+        else if(str == 'signup'){
+            aFile = 'signup.php';
+        }
+        else if(str == 'registration'){
+            aFile = 'registration.php';
+        }
+        else {
+            aFile = 'firstpage.php';
+        }
+    
+
+
+
+
+
+        /* $.ajax({
+            url: 'locale.php',
             cache: false,
             success: function(html){
-                $('#content_p').html(html);
+                $('#locale_sec').html(html);
             }
+        }); */
 
+/*     function Locale(){
+        $('#lang_send').submit(function(){
+            var str = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url : "locale.php",
+                data: str,
+                success: function(html){
+                    $('#locale_sec').html(html);
+                }
+            })
+            //return false;
+        })
+    }
+ */
+ $(document).on('change', '#selectmenu', function() {
+    var selected = $(this).val();
+    var action = '';
 
+    $.ajax({
+        url: "locale.php",
+        type: 'POST',
+        data: {
+            action: 'myajax',
+            postID: selected
+        },
+        //beforeSend: function(xhr) {},
+        success: function(html){
+            $('#locale_sec').html(html);
+            show_content();
+        },
+        error: function() {
+            alert('Error');
+        }
+    });
+});
+
+    //function show(){
+        $.ajax({
+            url: aFile,
+            cache: false,
+            success: function(html){
+                $('#content_sec').html(html);
+            }
+        });
+    //}
+
+    function show_content(){
+        $.ajax({
+            url: aFile,
+            cache: false,
+            success: function(html){
+                $('#content_sec').html(html);
+            }
         });
     }
-    setInterval('show()', 3000);
+
+    //    setInterval('show()', 3000);
+    
+//var a=887; console.log( a );
 </script>
 
 
+</head>
+<body>
+    <section id="locale_sec">
+        <div class="lang1" style="position:absolute; left:1400px; top:10px; ">
+            <form id="lang_send">
+                <select id="selectmenu">
+                    <option value="en"  selected="selected">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="chi">中国人</option>
+                </select>
+            </form>
+        </div>
+    </section>
 
+    <section id="content_sec"></section>
 </body>
 </html>
 

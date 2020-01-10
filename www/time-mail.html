@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<!--link rel="stylesheet" type="text/css" href="css/firstpage.css" /-->
+<script src="js/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+    <p id="content_p"></p>
+    <form id="email_send">
+        <input type="email" id="ema" name="email" >
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="lang1" style="position:absolute; left:1400px; top:10px; ">
+        <form id="lang_send">
+            <select id="selectmenu" name="language" onChange="form.submit();">
+                <option value="en" '.$selectLangMenuEN.'>English</option>
+                <option value="ru" '.$selectLangMenuRU.'>Русский</option>
+                <option value="chi" '.$selectLangMenuCHI.'>中国人</option>
+            </select>
+        </form>
+    </div>
+
+
+<!--************************************************************************************-->
+<script>
+$(document).on('change', '#selectmenu', function() {
+    var selected = $(this).val();
+
+    $.ajax({
+        url: "locale.php",
+        type: 'POST',
+        data: {
+            action: 'myajax',
+            postID: selected
+        },
+        //beforeSend: function(xhr) {},
+        success: function(data) {
+            $('.card-item-1').html(data);
+        },
+        error: function() {
+            alert('Error');
+        }
+    });
+});
+</script>
+<!--************************************************************************************-->
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $('#lang_send').submit(function(){
+        var str = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url : "locale.php",
+            data: str,
+            success: function(html){
+                $('#locale_sec').html(html);
+            }
+        })
+        return false;
+    })
+    function show(){
+        $.ajax({
+            url: "time.php",
+            cache: false,
+            success: function(html){
+                $('#content_p').html(html);
+            }
+
+
+        });
+    }
+    setInterval('show()', 3000);
+</script>
+
+
+
+</body>
+</html>
+
+
