@@ -1,14 +1,7 @@
-<?php  
-include_once("config.php");
-include_once("engine.php");
-open_connection();
-
-include('locale_files.php');
-?>
 <script>
 $( "#radioset" ).buttonset();
 </script>
-<link rel="stylesheet" type="text/css" href="css/signup.css" />
+
 <div class="general">
 
 <h3><?php echo $t8; ?></h3>

@@ -5,21 +5,21 @@ open_connection();
 include('locale_files.php');
 
 
-if(isset($_GET['q']) AND trim($_GET['q'])){  
-	if($_GET['q'] == 'market'){
+if(isset($_POST['page']) AND trim($_POST['page'])){  
+	if($_POST['page'] == 'market'){
 		include('exchange/BTC-USDT.php');
 	}
-	elseif($_GET['q'] == 'signup'){
+	elseif($_POST['page'] == 'signup'){
 		include('signup.php');
 	}
-	elseif($_GET['q'] == 'registration'){
+	elseif($_POST['page'] == 'registration'){
 		include('registration.php');
 	}
-	elseif(strstr($_GET['q'],'firstpage')){
+	elseif(strstr($_POST['page'],'firstpage')){
 		include('firstpage.php');
 	}
 	else{
-		echo  "</h1>ДРУГАЯ страница<br>".$_GET['q']."</h1>";
+		echo  "</h1>ДРУГАЯ страница<br>".$_POST['page']."</h1>";
 	}
 }
 else{

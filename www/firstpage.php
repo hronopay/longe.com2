@@ -1,10 +1,6 @@
+
 <?php 
-include('locale_files.php');
 echo '
-<link rel="stylesheet" type="text/css" href="css/firstpage.css" />
-
-
-
 <div style="position:absolute; left:'.$pos1.'px; top:15px; ">
 <h4>'.$t1.'</h4>
 </div>

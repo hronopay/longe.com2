@@ -9,22 +9,14 @@
 <link href="../css/jquery-ui.css" rel="stylesheet">
 
 <script type="text/javascript">
+    var signupCss = '<link rel="stylesheet" type="text/css" href="../css/signup.css" />';
+    var firstPageCss = '<link rel="stylesheet" type="text/css" href="../css/firstpage.css" />';
     var str = window.location.pathname.replace("/","");
     if(str=='index.html') str='';
     console.log( str );
 
-        if(str == 'market'){
-            aFile = 'exchange/BTC-USDT.php';
-        }
-        else if(str == 'signup'){
-            aFile = 'signup.php';
-        }
-        else if(str == 'registration'){
-            aFile = 'registration.php';
-        }
-        else {
-            aFile = 'firstpage.php';
-        }
+    if(str=='signup') $('head').append(signupCss); //signupCss;
+    else $('head').append(firstPageCss); //firstPageCss;
  
     $.ajax({
         url: "locale.php", // setcookie("lang")...    it supposed to be 'en'.. after every load of index page ??
@@ -66,12 +58,13 @@
         //if($('select').is("#selectmenu")) langvalue = $('#selectmenu').val();
         if($('select').is("#selectmenu")) langvalue = $('#selectmenu option:selected').val();
         $.ajax({
-            url: aFile,
+            url: 'api.php',
             type: 'POST',
             cache: false,
             data: {
-                action: aFile,       //  no use
-                langv: langvalue        //  add lang_'langvalue'.php  file with tongue localization
+                action: 'api.php/'+str,       //  no use
+                langv: langvalue,        //  add lang_'langvalue'.php  
+                page: str
             },
             success: function(html){
                 $('#content_sec').html(html);
