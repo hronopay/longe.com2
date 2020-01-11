@@ -17,7 +17,7 @@ $( "#radioset" ).buttonset();
 
 	<div align="left">
 		<strong><?php echo $t11; ?></strong><br>
-		<input maxlength="100"  type="text" name="mail">
+		<input id="mail" maxlength="100"  type="email" name="mail">
 	</div>
 
 	<div align="left">
