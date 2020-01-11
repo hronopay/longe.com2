@@ -1,12 +1,12 @@
 <?php
-if($_POST["postID"] == 'ru' || $_REQUEST["postID"] == 'ru') 
+if($_POST["setCookie"] == 'ru' || $_REQUEST["setCookie"] == 'ru') 
 	setcookie("lang","ru");
-elseif($_POST["postID"] == 'chi' || $_REQUEST["postID"] == 'chi') 
+elseif($_POST["setCookie"] == 'chi' || $_REQUEST["setCookie"] == 'chi') 
 	setcookie("lang","chi");
-else 
-	setcookie("lang","en");
+elseif($_POST["setCookie"] == 'en' || $_REQUEST["setCookie"] == 'en') 
+	setcookie("lang","chi");
 
-$select = $_POST["postID"];
+$select = $_POST["setCookie"] ? $_POST["setCookie"] : $_COOKIE["lang"] ;
 
 if ($select=='chi') 	{
 	$selectLangMenuEN = '';
@@ -25,7 +25,7 @@ else 												{
 }
 
 
-$checkCode = '<br>postID = '.$_POST["postID"].' <br>_COOKIE = '.$_COOKIE["lang"].'<br>'.date("H:i:s");
+$checkCode = '<br>setCookie = '.$_POST["setCookie"].' <br>_COOKIE = '.$_COOKIE["lang"].'<br>'.date("H:i:s");
 $checkCode = '';
 
 

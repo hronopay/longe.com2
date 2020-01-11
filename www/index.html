@@ -25,14 +25,15 @@
         else {
             aFile = 'firstpage.php';
         }
-    
-        /* $.ajax({
-            url: 'locale.php',
-            cache: false,
-            success: function(html){
-                $('#locale_sec').html(html);
-            }
-        }); */
+ 
+    $.ajax({
+        url: "locale.php", // setcookie("lang")...    it supposed to be 'en'.. after every load of index page ??
+        cache: false,
+        success: function(html){
+            $('#locale_sec').html(html);
+            console.log('#1 done (locale on load)');
+        }
+    });
 
 
  $(document).on('change', '#selectmenu', function() {
@@ -40,16 +41,17 @@
     var action = '';
 
     $.ajax({
-        url: "locale.php",
+        url: "locale.php",  //   $_COOKIE["lang"] = 
         type: 'POST',
         data: {
-            action: 'myajax',
-            postID: selected
+            action: 'locale.php',       //  no use
+            setCookie: selected     //  setcookie("lang",selected);
         },
         //beforeSend: function(xhr) {},
         success: function(html){
             $('#locale_sec').html(html);
             show_content();
+            console.log('#2 done (locale on change)');
         },
         error: function() {
             alert('Error');
@@ -57,46 +59,42 @@
     });
 });
 
-    //function show(){
-/*         $.ajax({
-            url: aFile,
-            cache: false,
-            success: function(html){
-                $('#content_sec').html(html);
-            }
-        }); */
-    //}
+    
 
-    function show_content(){
+    function show_content_old(){
+        var langvalue = '';
+        //if($('select').is("#selectmenu")) langvalue = $('#selectmenu').val();
+        if($('select').is("#selectmenu")) langvalue = $('#selectmenu option:selected').val();
         $.ajax({
             url: aFile,
+            type: 'POST',
             cache: false,
+            data: {
+                action: aFile,       //  no use
+                langv: langvalue        //  add lang_'langvalue'.php  file with tongue localization
+            },
             success: function(html){
                 $('#content_sec').html(html);
+                console.log('#3 done ( show_content(); )');
+            },
+            error: function() {
+                alert('Error #3');
             }
         });
     }
 
+    function show_content(){
+        $( "#locale_sec" ).load( show_content_old() );
+    }
+
     //    setInterval('show()', 3000);
     
-//var a=887; console.log( a );
 </script>
 
 
 </head>
 <body onload="show_content()">
-    <section id="locale_sec">
-        <div class="lang1" style="position:absolute; left:1400px; top:10px; ">
-            <form id="lang_send">
-                <select id="selectmenu">
-                    <option value="en"  selected="selected">English</option>
-                    <option value="ru">Русский</option>
-                    <option value="chi">中国人</option>
-                </select>
-            </form>
-        </div>
-    </section>
-
+    <section id="locale_sec"></section>
     <section id="content_sec"></section>
 </body>
 </html>

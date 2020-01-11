@@ -1,15 +1,14 @@
 <?php
-if ($_COOKIE['lang']=='chi') 	{
-	include('locale/lang_chi.php');
-}
-elseif($_COOKIE['lang']=='ru')  					{
-	include('locale/lang_ru.php');
-}
-else 												{
-	include('locale/lang_en.php');
-}
-
- ?>
+//if ($_COOKIE['lang']) include('locale/lang_'.$_COOKIE['lang'].'.php');
+if ($_POST['langv']) include('locale/lang_'.$_POST['langv'].'.php');
+elseif ($_COOKIE["lang"]) include('locale/lang_'.$_COOKIE["lang"].'.php');
+else include('locale/lang_en.php');
+/* 
+echo ' <br>_COOKIE = '.$_COOKIE["lang"].'<br>';
+echo ' <br>langv = '.$_POST["langv"].'<br>';
+echo ' <br>action = '.$_POST["action"].'<br>';
+ */
+?>
 
 
 

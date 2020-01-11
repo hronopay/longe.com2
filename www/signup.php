@@ -4,7 +4,6 @@ include_once("engine.php");
 open_connection();
 
 include('locale_files.php');
-
 ?>
 <script>
 $( "#radioset" ).buttonset();
