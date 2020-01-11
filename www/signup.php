@@ -1,5 +1,27 @@
 <script>
 $( "#radioset" ).buttonset();
+
+/* $('#pass').on('change',	function(){
+	$('.stongpass').css({ "font-weight":"bold",  "color":"red"});
+}); */
+/* $(document).ready(function(){ */ 
+	$('#pass').on('keyup', function(){
+		var count = $(this).val().length; // ipput letters
+		//var num = max - count; 
+		if(count >= 0 && count < 7){
+			$('.stongpass').css({ "font-weight":"bold", "font-size":"15px",  "color":"#ff8888"});
+			$('.stongpass').text('Weak');
+		}
+		else if(count < 12){
+			$('.stongpass').css({ "font-weight":"bold", "font-size":"15px","color":"#888888"});
+			$('.stongpass').text('Medium');
+		}
+		else {
+			$('.stongpass').css({ "font-weight":"bold", "font-size":"15px","color":"#88ff88"});
+			$('.stongpass').text('Strong');
+		}
+	});
+/* });  */
 </script>
 
 <div class="general">
@@ -22,7 +44,7 @@ $( "#radioset" ).buttonset();
 
 	<div align="left">
 		<?php echo $t12; ?><br>
-		<input type="password" name="phone" maxlength="100">
+		<input id="pass" type="password" name="phone" maxlength="100">
 	</div>
 		
 
