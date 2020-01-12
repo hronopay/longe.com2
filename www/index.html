@@ -19,7 +19,7 @@
     else $('head').append(firstPageCss); //firstPageCss;
  
     $.ajax({
-        url: "locale.php", // setcookie("lang")...    it supposed to be 'en'.. after every load of index page ??
+        url: "locale.php", // $_COOKIE["lang"] = '' 
         cache: false,
         success: function(html){
             $('#locale_sec').html(html);
@@ -33,7 +33,7 @@
     var action = '';
 
     $.ajax({
-        url: "locale.php",  //   $_COOKIE["lang"] = 
+        url: "locale.php",  //   $_COOKIE["lang"] = selected
         type: 'POST',
         data: {
             action: 'locale.php',       //  no use

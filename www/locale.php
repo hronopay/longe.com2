@@ -1,10 +1,5 @@
 <?php
-if($_POST["setCookie"] == 'ru' || $_REQUEST["setCookie"] == 'ru') 
-	setcookie("lang","ru");
-elseif($_POST["setCookie"] == 'chi' || $_REQUEST["setCookie"] == 'chi') 
-	setcookie("lang","chi");
-elseif($_POST["setCookie"] == 'en' || $_REQUEST["setCookie"] == 'en') 
-	setcookie("lang","chi");
+if($_POST["setCookie"] && $_POST["setCookie"] != '') setcookie("lang",$_POST["setCookie"]);
 
 $select = $_POST["setCookie"] ? $_POST["setCookie"] : $_COOKIE["lang"] ;
 
