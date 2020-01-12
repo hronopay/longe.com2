@@ -16,7 +16,8 @@
     console.log( str );
 
     if(str=='signup') $('head').append(signupCss); //signupCss;
-    else $('head').append(firstPageCss); //firstPageCss;
+    else if(str=='firstpage' || str=='') $('head').append(firstPageCss); //firstPageCss;
+    else $('head').append(''); //nothing;
  
     $.ajax({
         url: "locale.php", // $_COOKIE["lang"] = '' 

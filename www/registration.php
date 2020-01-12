@@ -1,12 +1,12 @@
 <?php 
 include_once('include/ip.php');  
-include("include/header.php"); 
 include_once("config.php");
 include_once("engine.php");
-
-	open_connection();
+open_connection();
 
 $_POST['id'] = round (time()/3, 0);
+
+echo "what is pass " .$_POST['pass']. " this mail ". $_POST['mail']." - nothing???";
 
 if ($_POST['doreg']){
 
@@ -15,7 +15,7 @@ if ($_POST['doreg']){
 			<div class=\"general\">
 				<h3>Error!</h3>
 				<div class=\"verifyemail\">
-				You have not filled in the \"E-mail\" field. <br> Click <a href='javascript: history.back()'> back </a> and try again.
+				You have not filled in the \"E-mail\" field. <br> Click <a href='javascript:  document.location.href = \"signup\";'> back </a> and try again.
 				</div>
 			</div>");
 	
@@ -29,24 +29,24 @@ if ($_POST['doreg']){
 			<div class=\"general\">
 				<h3>Error!</h3>
 				<div class=\"verifyemail\">
-				The \"E-mail\" field is not up to standard. <br> Click <a href='javascript: history.back()'> back </a> and try again.
+				The \"E-mail\" field is not up to standard. <br> Click <a href='javascript:  document.location.href = \"signup\";'> back </a> and try again.
 				</div>
 			</div>");
 	
-		//die("Ошибка! Поле \"E-mail\" не соответствует стандартам.<br>\n Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.");  
+		//die("Ошибка! Поле \"E-mail\" не соответствует стандартам.<br>\n Нажмите <a href='javascript:  document.location.href = \"signup\";'>назад</a> и попробуйте снова.");  
 
 
 
-	if ( (!$_POST['mail']) || (!$_POST['phone']) ){
+	if ( (!$_POST['mail']) || (!$_POST['pass']) ){
 		die("
 			<div class=\"general\">
 				<h3>Error!</h3>
 				<div class=\"verifyemail\" align=\"left\">
-				You have not fully completed the registration form. Click <a href='javascript: history.back()'> back </a> and try again.
+				You have not fully completed the registration form. Click <a href='javascript:  document.location.href = \"signup\";'> back </a> and try again.
 				</div>
 			</div>");
 	
-		//die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript: history.back()'>назад</a> и попробуйте снова.<br></strong>");
+		//die ( "<br><br><strong>Ошибка! Вы не полностью заполнили форму регистрации. Нажмите <a href='javascript:  document.location.href = \"signup\";'>назад</a> и попробуйте снова.<br></strong>");
 		}
 	else{
 		$qins = "INSERT INTO `registration` ( 
@@ -97,14 +97,15 @@ if ($_POST['doreg']){
 		 `wmpurse` 
 		 ) 
 		
-		VALUES ( '', 
+		VALUES ( 
+		'', 
 		'".$_POST['id']."', 
 		'', 
 		'".md5($pass)."', 
 		'', 
 		'".$_POST['mail']."', 
 		'', 
-		'".$_POST['phone']."', 
+		'".$_POST['pass']."', 
 		'', 
 		'code', 
 		'', 
@@ -211,6 +212,5 @@ if ($_POST['doreg']){
 }
 
 
-	close_connection();
- include('include/footer.php');
+//phpinfo(32);
 ?>

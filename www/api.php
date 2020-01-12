@@ -26,4 +26,9 @@ else{
 	include('firstpage.php');
 }
 
+
+
+close_connection();
+include('include/footer.php');
+
 ?>
