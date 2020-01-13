@@ -17,7 +17,14 @@
 		}
 	});
 
+	function checkTheForm() {
+		;
+	}
+
 	$('#CreateAcc').on('click', function(){
+
+		checkTheForm();
+
 		var po_radio1 = $("#radio1 input:radio").val(); 
 		var po_radio2 = $("#radio2 input:radio").val(); 
 		var po_mail = $("#mail").val(); 
