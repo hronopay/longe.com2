@@ -7,7 +7,7 @@ include('locale_files.php');
 
 if(isset($_POST['page']) AND trim($_POST['page'])){  
 	if($_POST['page'] == 'market'){
-		include('exchange/BTC-USDT.php');
+		include('exchange/market.php');
 	}
 	elseif($_POST['page'] == 'signup'){
 		include('signup.php');
@@ -18,6 +18,12 @@ if(isset($_POST['page']) AND trim($_POST['page'])){
 	elseif(strstr($_POST['page'],'firstpage')){
 		include('firstpage.php');
 	}
+//   make SQL request here later ////////////////////////////////   market
+	elseif(strstr($_POST['page'],'BTC-USDT')){
+		include('exchange/market.php');
+	}
+//   ////////////////////////////////////////////////////////////
+
 	else{
 		echo  "</h1>ДРУГАЯ страница<br>".$_POST['page']."</h1>";
 	}

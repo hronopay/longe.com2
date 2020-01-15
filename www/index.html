@@ -11,12 +11,14 @@
 <script type="text/javascript">
     var signupCss = '<link rel="stylesheet" type="text/css" href="../css/signup.css" />';
     var firstPageCss = '<link rel="stylesheet" type="text/css" href="../css/firstpage.css" />';
+    var marketCss = '<link rel="stylesheet" type="text/css" href="../css/market.css" />';
     var str = window.location.pathname.replace("/","");
     if(str=='index.html') str='';
     console.log( str );
 
     if(str=='signup') $('head').append(signupCss); //signupCss;
     else if(str=='firstpage' || str=='') $('head').append(firstPageCss); //firstPageCss;
+    else if(str=='market') $('head').append(marketCss); //firstPageCss;
     else $('head').append(''); //nothing;
  
     $.ajax({

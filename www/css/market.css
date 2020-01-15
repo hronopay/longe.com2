@@ -1,0 +1,103 @@
+#headermarketcont{
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	width: 100%;
+	border: solid 1px #002250;
+	background-color: #002250;
+	color: antiquewhite;
+}
+#headermarket {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 0.9;
+  padding: 20px;
+  font-family: 'Syncopate', sans-serif;
+  text-transform: uppercase;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    white,
+    #299
+  ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*******************************************************************/
+#charts_instr{
+	position:absolute;
+	left:-1px;
+	top:50px;
+	width: 100%;
+	border: solid 1px #002250;
+	background-color: rgb(139, 113, 165);
+	color: antiquewhite;
+}
+#charts{
+	width: 50%;
+	border: solid 8px #226fdb;
+	background-color: #101d30;
+	color: antiquewhite;
+	float: right;
+	text-align: center; 
+	margin: 0 2px;
+}
+#instr{
+	width: 500px;
+	border: solid 8px #002250;
+	background-color: rgb(76, 209, 87);
+	color: black;
+	float: right;
+	text-align: center; 
+	margin: 0 2px;
+}
+#deals_actions_orders{
+	position:absolute;
+	left:-1px;
+	top:500px;
+	width: 100%;
+	border: solid 1px #002250;
+	background-color: #3f7acc;
+	color: rgb(68, 50, 26);
+}
+#deals{
+	position:relative;
+	left:1px;
+	top:-1px;
+	width: 100px;
+	border: solid 1px #002250;
+	background-color: #176adf;
+	color: rgb(27, 122, 51);
+}
+#actions{
+	position:relative;
+	left:1px;
+	width: 400px;
+	border: solid 1px #002250;
+	background-color: #254066;
+	color: antiquewhite;
+}
+#orders{
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	width: 300px;
+	border: solid 1px #002250;
+	background-color: #c53856;
+	color: antiquewhite;
+}
+
+
+.outer{
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+.block{
+	position:relative;
+	left:10px;
+	top:5px;
+  height:100px;
+  width:100%; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
