@@ -33,8 +33,8 @@
 	color: antiquewhite;
 }
 #charts{
-	width: 50%;
-	border: solid 8px #226fdb;
+	width: 99%;
+	border: solid 1px #226fdb;
 	background-color: #101d30;
 	color: antiquewhite;
 	float: right;
@@ -42,8 +42,8 @@
 	margin: 0 2px;
 }
 #instr{
-	width: 500px;
-	border: solid 8px #002250;
+	width: 99%;
+	border: solid 1px #002250;
 	background-color: rgb(76, 209, 87);
 	color: black;
 	float: right;
@@ -51,7 +51,6 @@
 	margin: 0 2px;
 }
 #deals_actions_orders{
-	position:absolute;
 	left:-1px;
 	top:500px;
 	width: 100%;
@@ -60,7 +59,6 @@
 	color: rgb(68, 50, 26);
 }
 #deals{
-	position:relative;
 	left:1px;
 	top:-1px;
 	width: 100px;
@@ -69,7 +67,6 @@
 	color: rgb(27, 122, 51);
 }
 #actions{
-	position:relative;
 	left:1px;
 	width: 400px;
 	border: solid 1px #002250;
@@ -77,9 +74,6 @@
 	color: antiquewhite;
 }
 #orders{
-	position:absolute;
-	left:-1px;
-	top:-1px;
 	width: 300px;
 	border: solid 1px #002250;
 	background-color: #c53856;
@@ -90,13 +84,11 @@
 .outer{
 	width:100%;
 	margin:0 auto;
-	position:relative;
 }
 .block{
-	position:relative;
-	left:10px;
+	left:5px;
 	top:5px;
-  height:100px;
+  height:348px;
   width:100%; 
   overflow-y: scroll;
   overflow-x: hidden;
